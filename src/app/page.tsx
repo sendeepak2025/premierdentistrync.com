@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
@@ -10,11 +11,88 @@ import { CategoryTeaser } from "@/components/CategoryTeaser";
 import { ServiceListRows } from "@/components/ServiceListRows";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { TeamCarousel } from "@/components/TeamCarousel";
-import { site } from "@/lib/site";
+import { services, site } from "@/lib/site";
+import { absoluteUrl, jsonLd } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Ballantyne Dentist in Charlotte NC | Premier Dentistry",
+  description:
+    "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book gentle family dentistry, same-day crowns, Invisalign, implants, veneers, emergency dental care, and sedation dentistry.",
+  alternates: { canonical: "/" },
+  keywords: [
+    "Ballantyne dentist",
+    "Charlotte NC dentist",
+    "Premier Dentistry Charlotte",
+    "Dr. Anand Patel DDS",
+    "family dentist Ballantyne",
+    "emergency dentist Charlotte",
+    "cosmetic dentist Ballantyne",
+    "same-day crowns Charlotte",
+  ],
+  openGraph: {
+    title: "Premier Dentistry | Ballantyne Dentist in Charlotte NC",
+    description:
+      "Gentle, modern family, cosmetic, restorative, emergency, implant, Invisalign, and sedation dentistry in Ballantyne.",
+    url: absoluteUrl("/"),
+    type: "website",
+    images: [
+      {
+        url: absoluteUrl("/og-image.png"),
+        width: 1200,
+        height: 630,
+        alt: "Premier Dentistry of Charlotte - Ballantyne dentist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premier Dentistry | Ballantyne Dentist in Charlotte NC",
+    description:
+      "Modern dental care in Ballantyne with Dr. Anand Patel, DDS.",
+    images: [absoluteUrl("/og-image.png")],
+  },
+};
 
 export default function HomePage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": absoluteUrl("/#webpage"),
+        url: absoluteUrl("/"),
+        name: "Premier Dentistry of Charlotte - Ballantyne Dentist",
+        description: metadata.description,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#dentist") },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: absoluteUrl("/og-image.png"),
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/#featured-services"),
+        name: "Featured dental services at Premier Dentistry",
+        itemListElement: services.slice(0, 8).map((service, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: service.title,
+          url: absoluteUrl(`/services/${service.slug}`),
+        })),
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
+      />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#cfd2d5] text-ink">
         <Image

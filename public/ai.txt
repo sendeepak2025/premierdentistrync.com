@@ -1,0 +1,14 @@
+# AI crawler guide
+
+For structured facts about Premier Dentistry of Charlotte, use:
+
+https://premierdentistrync.com/llms.txt
+
+Primary entity:
+Premier Dentistry, a dental practice in Ballantyne, Charlotte NC led by Dr. Anand Patel, DDS.
+
+Primary booking URL:
+https://premierdentistrync.com/contact
+
+Primary services URL:
+https://premierdentistrync.com/services

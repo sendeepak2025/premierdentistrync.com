@@ -7,19 +7,104 @@ import { CallToAction } from "@/components/CallToAction";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { services, site } from "@/lib/site";
 import type { Service } from "@/lib/site";
+import { absoluteUrl, jsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Dental Services & Treatments",
+  title: "Dental Services in Ballantyne, Charlotte NC",
   description:
-    "Cleanings, Invisalign, implants, veneers, root canals, sedation and more — comprehensive dentistry from Dr. Anand Patel in Ballantyne, Charlotte NC.",
+    "Explore dental services at Premier Dentistry in Ballantyne, Charlotte NC: cleanings, same-day crowns, Invisalign, implants, veneers, root canals, emergency dentistry, sedation, whitening, and more.",
   alternates: { canonical: "/services" },
+  keywords: [
+    "dental services Ballantyne",
+    "dentist services Charlotte NC",
+    "same-day crowns Charlotte",
+    "Invisalign Ballantyne",
+    "dental implants Charlotte",
+    "emergency dental care Ballantyne",
+  ],
+  openGraph: {
+    title: "Dental Services in Ballantyne, Charlotte NC | Premier Dentistry",
+    description:
+      "Family, cosmetic, restorative, emergency, implant, Invisalign, and sedation dental care from Dr. Anand Patel, DDS.",
+    url: absoluteUrl("/services"),
+    images: [
+      {
+        url: absoluteUrl("/og-image.png"),
+        width: 1200,
+        height: 630,
+        alt: "Dental services at Premier Dentistry in Ballantyne",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dental Services in Ballantyne, Charlotte NC",
+    description:
+      "Comprehensive dental care from Premier Dentistry in Ballantyne.",
+    images: [absoluteUrl("/og-image.png")],
+  },
 };
 
 const categories = ["Preventive", "Cosmetic", "Restorative", "Specialty"] as const;
 
 export default function ServicesPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": absoluteUrl("/services#webpage"),
+        url: absoluteUrl("/services"),
+        name: "Dental Services in Ballantyne, Charlotte NC",
+        description: metadata.description,
+        isPartOf: { "@id": absoluteUrl("/#website") },
+        about: { "@id": absoluteUrl("/#dentist") },
+      },
+      {
+        "@type": "ItemList",
+        "@id": absoluteUrl("/services#services-list"),
+        name: "Dental services offered by Premier Dentistry",
+        itemListElement: services.map((service, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "Service",
+            name: service.title,
+            description: service.blurb,
+            url: absoluteUrl(`/services/${service.slug}`),
+            provider: { "@id": absoluteUrl("/#dentist") },
+            areaServed: "Ballantyne, Charlotte NC",
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": absoluteUrl("/services#breadcrumb"),
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Dental Services",
+            item: absoluteUrl("/services"),
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
+      />
       {/* Blue banner hero */}
       <section className="relative overflow-hidden bg-brand text-white">
         <div className="absolute inset-0 opacity-30 pointer-events-none">
