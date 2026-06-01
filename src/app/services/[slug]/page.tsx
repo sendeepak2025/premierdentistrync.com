@@ -9,6 +9,7 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { services, testimonials, site } from "@/lib/site";
 import { serviceDetails } from "@/lib/serviceDetails";
 import { ToothIcon } from "@/components/ToothIcon";
+import { absoluteUrl, jsonLd } from "@/lib/seo";
 
 type Params = { slug: string };
 
@@ -25,13 +26,37 @@ export async function generateMetadata({
   const service = services.find((s) => s.slug === slug);
   const detail = serviceDetails[slug];
   if (!service || !detail) return {};
+  const canonical = `/services/${slug}`;
   return {
-    title: service.title,
-    description: detail.hero.subtitle,
-    alternates: { canonical: `/services/${slug}` },
+    title: `${service.title} in Ballantyne, Charlotte NC`,
+    description: `${detail.hero.subtitle} Premier Dentistry provides ${service.title.toLowerCase()} in Ballantyne, Charlotte NC with Dr. Anand Patel, DDS.`,
+    alternates: { canonical },
+    keywords: [
+      `${service.title} Charlotte NC`,
+      `${service.title} Ballantyne`,
+      `${service.title} near me`,
+      `${service.title} Premier Dentistry`,
+      "Dr. Anand Patel DDS",
+    ],
     openGraph: {
-      title: `${service.title} | Premier Dentistry`,
+      title: `${service.title} in Ballantyne, Charlotte NC | Premier Dentistry`,
+      description: `${detail.hero.subtitle} Book with Premier Dentistry in Ballantyne.`,
+      url: absoluteUrl(canonical),
+      type: "article",
+      images: [
+        {
+          url: absoluteUrl("/og-image.png"),
+          width: 1200,
+          height: 630,
+          alt: `${service.title} at Premier Dentistry in Ballantyne`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} in Ballantyne, Charlotte NC`,
       description: detail.hero.subtitle,
+      images: [absoluteUrl("/og-image.png")],
     },
   };
 }
@@ -51,9 +76,69 @@ export default async function ServiceDetailPage({
     .filter(Boolean) as typeof services;
 
   const featuredReview = testimonials[0];
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": absoluteUrl(`/services/${service.slug}#service`),
+        name: `${service.title} in Ballantyne, Charlotte NC`,
+        serviceType: service.title,
+        category: service.category,
+        description: detail.hero.subtitle,
+        url: absoluteUrl(`/services/${service.slug}`),
+        provider: { "@id": absoluteUrl("/#dentist") },
+        areaServed: site.serviceAreas.map((area) => ({
+          "@type": "Place",
+          name: area,
+        })),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": absoluteUrl(`/services/${service.slug}#faqs`),
+        mainEntity: detail.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": absoluteUrl(`/services/${service.slug}#breadcrumb`),
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Dental Services",
+            item: absoluteUrl("/services"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.title,
+            item: absoluteUrl(`/services/${service.slug}`),
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
+      />
       {/* BLUE BANNER HERO */}
       <section className="relative overflow-hidden bg-brand text-white">
         <div className="absolute inset-0 opacity-30 pointer-events-none">
