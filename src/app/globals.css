@@ -1,26 +1,149 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #ffffff;
+  --color-surface: #f7f9fc;
+  --color-surface-2: #eef3fb;
+  --color-ink: #0d1830;
+  --color-ink-2: #3a4664;
+  --color-muted: #6b7591;
+  --color-line: #e3e8f2;
+
+  --color-brand: #2f5dc4;
+  --color-brand-2: #1e4093;
+  --color-brand-soft: #eaf0fc;
+  --color-accent: #c8a96a;
+  --color-accent-2: #a98a4f;
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+
+  --shadow-soft: 0 10px 40px -10px rgba(15, 23, 41, 0.12);
+  --shadow-card: 0 20px 60px -20px rgba(15, 23, 41, 0.18);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle pattern used in hero / section backgrounds */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(47, 93, 196, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(47, 93, 196, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-radial-brand {
+  background:
+    radial-gradient(800px 400px at 10% 0%, rgba(47, 93, 196, 0.12), transparent 60%),
+    radial-gradient(600px 300px at 90% 20%, rgba(200, 169, 106, 0.10), transparent 60%);
+}
+
+/* Reveal animation (initial paint helper) */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.reveal-delay-1 { animation-delay: 0.08s; }
+.reveal-delay-2 { animation-delay: 0.16s; }
+.reveal-delay-3 { animation-delay: 0.24s; }
+.reveal-delay-4 { animation-delay: 0.32s; }
+
+/* Dropdown menu fade-in */
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-in {
+  animation: menuIn 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transform-origin: top center;
+}
+
+/* Subtle button shimmer on hover */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Floating card idle motion */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.float-a { animation: floaty 6s ease-in-out infinite; }
+.float-b { animation: floaty 7s ease-in-out infinite 0.6s; }
+.float-c { animation: floaty 8s ease-in-out infinite 1.2s; }
+
+/* Slow rotating ring on hero centerpiece */
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow { animation: spinSlow 40s linear infinite; }
+
+/* Marquee for insurance strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 40s linear infinite; }
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Headline highlight underline that animates in */
+.brand-underline {
+  background-image: linear-gradient(transparent 78%, color-mix(in oklab, var(--color-accent) 55%, transparent) 78%, color-mix(in oklab, var(--color-accent) 55%, transparent) 96%, transparent 96%);
+  background-size: 100% 100%;
+  padding: 0 0.05em;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Smile underline accent */
+.smile-underline {
+  position: relative;
+  display: inline-block;
+}
+.smile-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.18em;
+  height: 0.32em;
+  background: radial-gradient(ellipse at center, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.55;
+  border-radius: 50%;
 }
