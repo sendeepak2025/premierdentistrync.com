@@ -88,7 +88,7 @@ export function ReviewsCarousel() {
                 </div>
                 <div className="absolute left-5 top-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 ring-1 ring-white/15">
                   <Icon name="google" className="h-3.5 w-3.5" />
-                  Verified review
+                  Patient feedback
                 </div>
               </div>
             ))}
@@ -119,7 +119,7 @@ export function ReviewsCarousel() {
                   ))}
                 </div>
                 <blockquote className="mt-4 font-display text-2xl sm:text-3xl text-ink leading-snug">
-                  &ldquo;{current.quote}&rdquo;
+                  {current.quote}
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-brand-soft text-brand flex items-center justify-center font-semibold">

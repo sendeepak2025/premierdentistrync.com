@@ -248,37 +248,37 @@ export const services: Service[] = [
     category: "Restorative",
     blurb:
       "Permanent replacements that look, feel, and function like the tooth you lost — planned with 3D imaging.",
-    long: "Using 3D digital X-rays and 3D printed surgical guides, we plan placement with millimeter precision for stability and long-term gum health. Most patients are eating comfortably within days of the final crown, and free implant consultations are available.",
+    long: "Using 3D digital X-rays and 3D printed surgical guides, we plan placement with millimeter precision for stability and long-term gum health. Most patients are eating comfortably within days of the final crown, and implant consultations are available.",
   },
 ];
 
 export const testimonials = [
   {
-    name: "Sarah M.",
-    role: "Ballantyne resident",
+    name: "Clear explanations",
+    role: "Patient feedback theme",
     quote:
-      "First time in years I didn't dread a dental visit. Dr. Patel actually explained what he saw on the X-ray and gave me options instead of pushing the most expensive one.",
+      "Patients often tell us they appreciate seeing X-rays and photos on screen, hearing their options clearly, and understanding what is urgent versus what can wait.",
     stars: 5,
   },
   {
-    name: "Jordan T.",
-    role: "Patient since 2021",
+    name: "Comfortable visits",
+    role: "Patient feedback theme",
     quote:
-      "Same-day CEREC crown, zero pain, and the front desk handled my insurance without me lifting a finger. They have set the bar for every dentist I will ever see.",
+      "The team builds extra time into visits so patients can ask questions, settle in, and move through treatment without feeling rushed.",
     stars: 5,
   },
   {
-    name: "Priya R.",
-    role: "Invisalign patient",
+    name: "Modern care",
+    role: "Patient feedback theme",
     quote:
-      "I finished Invisalign in 11 months and the result is better than I imagined. The check-ins were short, friendly, and never felt rushed.",
+      "Digital scans, CEREC same-day crowns, 3D imaging, and intraoral photos help make treatment easier to understand and more comfortable to plan.",
     stars: 5,
   },
   {
-    name: "Mike D.",
-    role: "New patient",
+    name: "Family-friendly team",
+    role: "Patient feedback theme",
     quote:
-      "Clean office, gentle hygienist, and a dentist who listens. I brought my whole family the following week.",
+      "Families choose the practice because routine visits, urgent needs, and cosmetic goals can be handled in one calm Ballantyne office.",
     stars: 5,
   },
 ];

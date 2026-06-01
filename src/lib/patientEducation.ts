@@ -180,7 +180,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "What to expect",
         body: [
-          "Placement is quick — just a few seconds per pocket — and completely painless. You will not feel the microspheres after they are in.",
+          "Placement is quick — just a few seconds per pocket — and typically comfortable. You will not feel the microspheres after they are in.",
           "Avoid touching the treated areas with a fingernail or toothpick for a week, and skip hard, crunchy, or sticky foods on that side for about ten days. Continue brushing, but be gentle around the treatment sites for the first 24 hours.",
         ],
       },

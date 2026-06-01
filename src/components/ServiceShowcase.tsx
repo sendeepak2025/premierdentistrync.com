@@ -9,7 +9,7 @@ type Props = {
 };
 
 export function ServiceShowcase({
-  heading = "The best dental care in Ballantyne.",
+  heading = "Modern dental care in Ballantyne.",
   subheading = "From routine cleanings to full-mouth restorations — every treatment your family needs, all under one roof.",
   limit,
 }: Props) {

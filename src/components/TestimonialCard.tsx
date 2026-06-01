@@ -17,7 +17,7 @@ export function TestimonialCard({ name, role, quote, stars }: Props) {
         ))}
       </div>
       <blockquote className="mt-4 text-ink-2 text-[15px] leading-relaxed">
-        “{quote}”
+        {quote}
       </blockquote>
       <figcaption className="mt-6 pt-4 border-t border-line">
         <div className="font-medium text-ink">{name}</div>

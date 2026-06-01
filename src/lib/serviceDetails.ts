@@ -621,7 +621,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       title: "What to expect",
       steps: [
         {
-          title: "1 · Free consult",
+          title: "1 · Consultation",
           body: "We confirm Invisalign is the right tool for your case and discuss timeline and cost.",
         },
         {
@@ -1117,7 +1117,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Restorative · 3D Planned",
       title: "Dental implants — permanent, natural, planned in 3D.",
       subtitle:
-        "A complete tooth replacement that looks, feels, and functions like the tooth you lost. Free implant consultations available.",
+        "A complete tooth replacement that looks, feels, and functions like the tooth you lost. Implant consultations are available.",
     },
     overview: [
       "A dental implant is a small titanium post that takes the place of a missing tooth root. After it integrates with the bone, we place a custom porcelain crown on top — and the result looks, feels, and chews just like a natural tooth.",
@@ -1138,7 +1138,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       title: "Step-by-step (typically 3 to 6 months)",
       steps: [
         {
-          title: "1 · Free consultation",
+          title: "1 · Consultation",
           body: "We talk through what you want, take 3D imaging, and confirm implants are right for your case.",
         },
         {
@@ -1171,7 +1171,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "Does not require shaping the adjacent teeth (unlike a bridge)",
         "Preserves the jawbone where the tooth was lost",
         "Chew normally, including foods that are hard with dentures",
-        "Free consultations — no cost to find out if you are a candidate",
+        "A focused consultation to find out if you are a candidate",
       ],
     },
     aftercare: {

@@ -238,7 +238,7 @@ export default function HomePage() {
       <Section bg="white">
         <Reveal>
           <ServiceShowcase
-            heading="The best dental care in Ballantyne."
+            heading="Modern dental care in Ballantyne."
             subheading="From routine cleanings to full-mouth restorations — every treatment your family needs, all under one roof."
           />
         </Reveal>
@@ -439,9 +439,9 @@ export default function HomePage() {
       <Section bg="white">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <Eyebrow>What patients say</Eyebrow>
+            <Eyebrow>What patients notice</Eyebrow>
             <Heading className="mt-3">
-              Kind words,{" "}
+              Clear care,{" "}
               <span className="text-brand italic">comfortable visits.</span>
             </Heading>
           </div>

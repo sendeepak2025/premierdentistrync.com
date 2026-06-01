@@ -258,8 +258,8 @@ export default async function ServiceDetailPage({
             <Heading className="mt-3 !text-3xl">{detail.candidacy.title}</Heading>
             <p className="mt-5 text-ink-2 leading-relaxed">
               Not sure if you are a candidate? A 20-minute consult with Dr.
-              Patel is the fastest way to find out — and it is free for most
-              treatments.
+              Patel is the fastest way to find out what treatment options fit
+              your goals, health, and timeline.
             </p>
             <Button href="/contact" className="mt-6">
               <Icon name="calendar" className="h-4 w-4" /> Book a consultation
@@ -407,11 +407,11 @@ export default async function ServiceDetailPage({
         </div>
       </Section>
 
-      {/* TESTIMONIAL */}
+      {/* PATIENT EXPERIENCE */}
       <Section bg="white">
         <div className="max-w-3xl mx-auto text-center">
-          <Eyebrow>From our patients</Eyebrow>
-          <Heading className="mt-3">Real care, real reviews.</Heading>
+          <Eyebrow>Patient experience</Eyebrow>
+          <Heading className="mt-3">Clear care, comfortable visits.</Heading>
         </div>
         <div className="mt-12 max-w-2xl mx-auto">
           <TestimonialCard {...featuredReview} />

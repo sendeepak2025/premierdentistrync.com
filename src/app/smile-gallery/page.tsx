@@ -7,7 +7,7 @@ import { CallToAction } from "@/components/CallToAction";
 export const metadata: Metadata = {
   title: "Smile Gallery",
   description:
-    "Before-and-after smile transformations — veneers, Invisalign, implants, and whitening at Premier Dentistry in Ballantyne, Charlotte NC.",
+    "Explore cosmetic and restorative smile treatment options at Premier Dentistry in Ballantyne, Charlotte NC, including veneers, Invisalign, implants, whitening, and crowns.",
   alternates: { canonical: "/smile-gallery" },
 };
 
@@ -52,16 +52,16 @@ export default function SmileGalleryPage() {
         <div className="absolute inset-0 bg-radial-brand opacity-60 pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-12 lg:pt-24 lg:pb-16">
           <div className="max-w-3xl reveal">
-            <Eyebrow>Real results</Eyebrow>
+            <Eyebrow>Treatment possibilities</Eyebrow>
             <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
-              Smiles we have helped
-              <span className="text-brand italic"> transform.</span>
+              Smile treatments,
+              <span className="text-brand italic"> planned personally.</span>
             </h1>
             <p className="mt-6 text-lg text-ink-2 leading-relaxed">
-              A look at recent cases from our Ballantyne office. Every smile
-              tells a different story — but the goal is always the same: a
-              result that looks natural, lasts, and makes the patient smile a
-              little wider.
+              Every smile starts with a different concern, a different bite,
+              and a different goal. These examples show the kinds of cosmetic
+              and restorative treatment plans we discuss in the office. Actual
+              before-and-after photography is shared only with patient consent.
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function SmileGalleryPage() {
                   </div>
                 </div>
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/95 text-ink text-xs font-medium rounded-full px-3 py-1 shadow-soft">
-                  Sample case
+                  Treatment option
                 </div>
               </div>
               <div className="p-5">
@@ -104,9 +104,9 @@ export default function SmileGalleryPage() {
         </div>
 
         <p className="mt-10 text-center text-sm text-muted max-w-2xl mx-auto">
-          Photo galleries shown here are placeholders. We will replace each
-          tile with actual before/after photography from the office once
-          consent forms are signed by featured patients.
+          Results vary by patient. During a consultation, Dr. Patel can review
+          examples, explain what is realistic for your teeth, and recommend the
+          most conservative path to the result you want.
         </p>
       </Section>
 
