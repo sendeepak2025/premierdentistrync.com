@@ -3,12 +3,20 @@ import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { site } from "@/lib/site";
 import { AppointmentForm } from "@/components/AppointmentForm";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact & Book an Appointment",
+  title: "Contact Premier Dentistry | Ballantyne Dentist Appointment",
   description:
     "Request a dental appointment at Premier Dentistry in Ballantyne, Charlotte NC. Call 704-544-8860 or send a message and we will get back to you the same business day.",
   alternates: { canonical: "/contact" },
+  keywords: [
+    ...primarySeoKeywords,
+    "book dentist appointment Ballantyne",
+    "Premier Dentistry phone number",
+    "dentist appointment Charlotte NC",
+    ...localSearchAreas.map((area) => `dental appointment near ${area}`),
+  ],
 };
 
 export default function ContactPage() {

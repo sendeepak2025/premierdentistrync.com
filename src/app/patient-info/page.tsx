@@ -6,12 +6,21 @@ import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { site, insuranceCarriers } from "@/lib/site";
 import { educationTopics, educationOrder } from "@/lib/patientEducation";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Patient Info — First Visit, Insurance & Financing",
   description:
     "Everything new patients need: what to bring on your first visit, insurance estimates, PremierCare savings plan details, financial policy, and the technology behind your care.",
   alternates: { canonical: "/patient-info" },
+  keywords: [
+    ...primarySeoKeywords,
+    "Premier Dentistry insurance",
+    "PremierCare savings plan",
+    "new patient dentist Ballantyne",
+    "dental financing Charlotte NC",
+    ...localSearchAreas.map((area) => `new patient dentist near ${area}`),
+  ],
 };
 
 const sections = [

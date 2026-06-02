@@ -10,23 +10,14 @@ import { RatingChip } from "@/components/RatingChip";
 import { Reveal } from "@/components/Reveal";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { services, site } from "@/lib/site";
-import { absoluteUrl, jsonLd } from "@/lib/seo";
+import { absoluteUrl, jsonLd, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Ballantyne Dentist in Charlotte NC | Premier Dentistry",
   description:
     "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book gentle family dentistry, same-day crowns, Invisalign, implants, veneers, emergency dental care, and nitrous oxide options.",
   alternates: { canonical: "/" },
-  keywords: [
-    "Ballantyne dentist",
-    "Charlotte NC dentist",
-    "Premier Dentistry Charlotte",
-    "Dr. Anand Patel DDS",
-    "family dentist Ballantyne",
-    "emergency dentist Charlotte",
-    "cosmetic dentist Ballantyne",
-    "same-day crowns Charlotte",
-  ],
+  keywords: primarySeoKeywords,
   openGraph: {
     title: "Premier Dentistry | Ballantyne Dentist in Charlotte NC",
     description:
@@ -69,6 +60,13 @@ export default function HomePage() {
           width: 1200,
           height: 630,
         },
+        significantLink: [
+          absoluteUrl("/services"),
+          absoluteUrl("/contact"),
+          absoluteUrl("/about"),
+          absoluteUrl("/patient-info"),
+          absoluteUrl("/smile-gallery"),
+        ],
       },
       {
         "@type": "ItemList",

@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { BookingStrip } from "@/components/BookingStrip";
 import { StructuredData } from "@/components/StructuredData";
 import { StickyMobileCta } from "@/components/StickyMobileCta";
-import { absoluteUrl, siteUrl } from "@/lib/seo";
+import { absoluteUrl, primarySeoKeywords, siteUrl } from "@/lib/seo";
 
 const sans = Inter({
   variable: "--font-sans",
@@ -29,27 +29,28 @@ export const metadata: Metadata = {
   },
   description:
     "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book cleanings, Invisalign, implants, veneers, same-day crowns, emergency dental care, and nitrous oxide options.",
-  keywords: [
-    "Premier Dentistry Charlotte",
-    "Premier Dentistry NC",
-    "Charlotte dentist",
-    "Ballantyne dentist",
-    "dentist near Ballantyne Charlotte NC",
-    "family dentist Charlotte NC",
-    "emergency dentist Ballantyne",
-    "same-day crowns Charlotte",
-    "Invisalign Charlotte",
-    "dental implants Charlotte",
-    "cosmetic dentist Ballantyne",
-    "nitrous oxide dentist Charlotte",
-    "Dr. Anand Patel",
-  ],
+  keywords: primarySeoKeywords,
   authors: [{ name: "Premier Dentistry of Charlotte", url: siteUrl }],
   creator: "Premier Dentistry of Charlotte",
   publisher: "Premier Dentistry of Charlotte",
   category: "Dental clinic",
   applicationName: "Premier Dentistry of Charlotte",
+  generator: "Next.js",
   referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+    types: {
+      "text/plain": [
+        { url: "/llms.txt", title: "Premier Dentistry AI summary" },
+        { url: "/ai.txt", title: "Premier Dentistry AI crawler guide" },
+      ],
+    },
+  },
   openGraph: {
     title: "Premier Dentistry of Charlotte | Ballantyne Dentist",
     description:
@@ -74,7 +75,6 @@ export const metadata: Metadata = {
       "Modern, gentle dentistry in Ballantyne, Charlotte NC with Dr. Anand Patel, DDS.",
     images: [absoluteUrl("/og-image.png")],
   },
-  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,

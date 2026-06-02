@@ -8,6 +8,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { Reveal } from "@/components/Reveal";
 import { educationTopics, educationOrder } from "@/lib/patientEducation";
 import { site } from "@/lib/site";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 type Params = { topic: string };
 
@@ -24,9 +25,15 @@ export async function generateMetadata({
   const data = educationTopics[topic];
   if (!data) return {};
   return {
-    title: data.title,
+    title: `${data.title} | Patient Education`,
     description: data.blurb,
     alternates: { canonical: `/patient-info/education/${topic}` },
+    keywords: [
+      ...primarySeoKeywords,
+      `${data.title} dentist Charlotte`,
+      `${data.title} Ballantyne`,
+      ...localSearchAreas.map((area) => `${data.title} near ${area}`),
+    ],
   };
 }
 

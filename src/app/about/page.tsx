@@ -6,12 +6,20 @@ import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { site, team } from "@/lib/site";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Premier Dentistry",
+  title: "About Dr. Anand Patel, DDS & Premier Dentistry",
   description:
     "Meet Dr. Anand Patel, DDS and the team behind Premier Dentistry — a Ballantyne, Charlotte practice built around comfort, honesty, and modern care.",
   alternates: { canonical: "/about" },
+  keywords: [
+    ...primarySeoKeywords,
+    "Dr. Anand Patel dentist",
+    "Premier Dentistry team",
+    "Ballantyne dental office",
+    ...localSearchAreas.map((area) => `dentist near ${area}`),
+  ],
 };
 
 export default function AboutPage() {

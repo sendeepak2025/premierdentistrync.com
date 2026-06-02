@@ -4,12 +4,20 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Smile Gallery",
+  title: "Smile Gallery | Before & After Dentist Photos",
   description:
     "Explore cosmetic and restorative before-and-after smile photos at Premier Dentistry in Ballantyne, Charlotte NC.",
   alternates: { canonical: "/smile-gallery" },
+  keywords: [
+    ...primarySeoKeywords,
+    "before and after dentist photos Charlotte",
+    "smile gallery Ballantyne",
+    "cosmetic dentistry results Charlotte NC",
+    ...localSearchAreas.map((area) => `cosmetic dentist near ${area}`),
+  ],
 };
 
 const cases = Array.from({ length: 7 }, (_, index) => ({

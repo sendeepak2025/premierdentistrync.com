@@ -7,7 +7,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { services, site } from "@/lib/site";
 import type { Service } from "@/lib/site";
-import { absoluteUrl, jsonLd } from "@/lib/seo";
+import { absoluteUrl, jsonLd, localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Dental Services in Ballantyne, Charlotte NC",
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "Explore dental services at Premier Dentistry in Ballantyne, Charlotte NC: cleanings, same-day crowns, Invisalign, implants, veneers, root canals, emergency dentistry, nitrous oxide, whitening, and more.",
   alternates: { canonical: "/services" },
   keywords: [
+    ...primarySeoKeywords,
     "dental services Ballantyne",
     "dentist services Charlotte NC",
     "same-day crowns Charlotte",
@@ -73,7 +74,7 @@ export default function ServicesPage() {
             description: service.blurb,
             url: absoluteUrl(`/services/${service.slug}`),
             provider: { "@id": absoluteUrl("/#dentist") },
-            areaServed: "Ballantyne, Charlotte NC",
+            areaServed: localSearchAreas.join(", "),
           },
         })),
       },

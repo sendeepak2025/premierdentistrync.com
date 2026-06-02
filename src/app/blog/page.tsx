@@ -5,12 +5,20 @@ import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { blogPosts, type BlogPost } from "@/lib/blogPosts";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Dental Blog | Premier Dentistry",
+  title: "Dental Blog | Ballantyne & Charlotte Dental Tips",
   description:
     "Dental care articles from Premier Dentistry in Ballantyne, including preventive care, restorative options, whitening, sleep apnea, and family dental tips.",
   alternates: { canonical: "/blog" },
+  keywords: [
+    ...primarySeoKeywords,
+    "dental blog Charlotte NC",
+    "Ballantyne dental tips",
+    "oral health education Charlotte",
+    ...localSearchAreas.map((area) => `dental advice near ${area}`),
+  ],
 };
 
 function formatDate(date: string) {

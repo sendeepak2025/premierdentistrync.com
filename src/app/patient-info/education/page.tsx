@@ -7,12 +7,20 @@ import { Button } from "@/components/Button";
 import { CallToAction } from "@/components/CallToAction";
 import { educationTopics, educationOrder } from "@/lib/patientEducation";
 import { site } from "@/lib/site";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Patient Education",
   description:
     "Plain-English guides to oral hygiene, child dentistry, gum health, dental terminology and more — patient education from Premier Dentistry in Ballantyne, Charlotte NC.",
   alternates: { canonical: "/patient-info/education" },
+  keywords: [
+    ...primarySeoKeywords,
+    "patient education dentist Charlotte",
+    "oral hygiene guide Ballantyne",
+    "gum health dentist Charlotte NC",
+    ...localSearchAreas.map((area) => `dental education near ${area}`),
+  ],
 };
 
 export default function EducationHubPage() {

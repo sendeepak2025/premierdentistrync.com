@@ -4,12 +4,20 @@ import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { site } from "@/lib/site";
+import { localSearchAreas, primarySeoKeywords } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Office Tour",
+  title: "Office Tour | Modern Ballantyne Dental Office",
   description:
     "Take a virtual tour of Premier Dentistry, a calm, modern dental office in Ballantyne, Charlotte NC.",
   alternates: { canonical: "/office-tour" },
+  keywords: [
+    ...primarySeoKeywords,
+    "Premier Dentistry office photos",
+    "modern dental office Ballantyne",
+    "dental office tour Charlotte NC",
+    ...localSearchAreas.map((area) => `dental office near ${area}`),
+  ],
 };
 
 const rooms = [

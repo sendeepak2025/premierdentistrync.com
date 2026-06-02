@@ -9,7 +9,12 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { services, testimonials, site } from "@/lib/site";
 import { serviceDetails } from "@/lib/serviceDetails";
 import { ToothIcon } from "@/components/ToothIcon";
-import { absoluteUrl, jsonLd } from "@/lib/seo";
+import {
+  absoluteUrl,
+  jsonLd,
+  localSearchAreas,
+  primarySeoKeywords,
+} from "@/lib/seo";
 
 type Params = { slug: string };
 
@@ -32,10 +37,12 @@ export async function generateMetadata({
     description: `${detail.hero.subtitle} Premier Dentistry provides ${service.title.toLowerCase()} in Ballantyne, Charlotte NC with Dr. Anand Patel, DDS.`,
     alternates: { canonical },
     keywords: [
+      ...primarySeoKeywords,
       `${service.title} Charlotte NC`,
       `${service.title} Ballantyne`,
       `${service.title} near me`,
       `${service.title} Premier Dentistry`,
+      `${service.shortTitle ?? service.title} South Charlotte`,
       "Dr. Anand Patel DDS",
     ],
     openGraph: {
@@ -87,11 +94,28 @@ export default async function ServiceDetailPage({
         category: service.category,
         description: detail.hero.subtitle,
         url: absoluteUrl(`/services/${service.slug}`),
+        image: absoluteUrl("/og-image.png"),
+        mainEntityOfPage: absoluteUrl(`/services/${service.slug}`),
         provider: { "@id": absoluteUrl("/#dentist") },
-        areaServed: site.serviceAreas.map((area) => ({
+        audience: {
+          "@type": "Audience",
+          audienceType: "Dental patients in Ballantyne and South Charlotte",
+        },
+        areaServed: localSearchAreas.map((area) => ({
           "@type": "Place",
           name: area,
         })),
+        availableChannel: {
+          "@type": "ServiceChannel",
+          serviceUrl: absoluteUrl("/contact"),
+          servicePhone: site.phone,
+          availableLanguage: "English",
+        },
+        potentialAction: {
+          "@type": "ReserveAction",
+          target: absoluteUrl("/contact"),
+          name: `Request an appointment for ${service.title}`,
+        },
       },
       {
         "@type": "FAQPage",
