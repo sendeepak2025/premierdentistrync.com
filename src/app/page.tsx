@@ -101,8 +101,8 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_50%,rgba(238,245,251,0.34)_68%,rgba(238,245,251,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
-          <Reveal className="flex max-w-[670px] flex-col justify-center sm:min-h-[520px] lg:min-h-[585px]" y={16}>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 pt-6 sm:min-h-[600px] sm:px-6 sm:pb-14 sm:pt-8 lg:min-h-[640px] lg:px-8">
+          <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[500px] lg:min-h-[545px]" y={16}>
             <div className="hidden">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-semibold text-ink shadow-soft sm:px-4 sm:text-sm">
@@ -111,7 +111,7 @@ export default function HomePage() {
               </span>
             </div>
 
-            <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.3em] text-brand sm:mt-10 sm:text-sm">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.3em] text-brand sm:text-sm">
               Premier Dentistry of Charlotte
             </p>
             <h1 className="mt-7 max-w-[660px] font-display text-[3rem] leading-[0.95] text-[#071733] min-[390px]:text-[3.25rem] sm:text-[4.9rem] lg:text-[5.9rem]">
@@ -201,13 +201,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="absolute bottom-8 right-8 z-10 hidden rounded-md bg-ink px-6 py-4 text-white shadow-card lg:block">
-            <div className="font-semibold">
-              {site.doctor.name}, {site.doctor.credentials}
-            </div>
-            <div className="mt-1 text-sm text-white/75">Practicing since 2011</div>
-            <div className="mt-4 h-0.5 w-8 bg-brand-soft" />
           </div>
         </div>
       </section>
