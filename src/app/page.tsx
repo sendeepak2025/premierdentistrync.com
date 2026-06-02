@@ -154,7 +154,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-8 grid max-w-[660px] grid-cols-2 rounded-xl border border-line bg-white/92 p-3 shadow-soft backdrop-blur-sm sm:grid-cols-4">
+            <div className="mt-8 grid max-w-[740px] grid-cols-2 overflow-hidden rounded-xl border border-line bg-white/94 shadow-soft backdrop-blur-sm sm:grid-cols-4">
               {[
                 ["users", "Local", "Families Served"],
                 ["star", "5.0", "Google Rating"],
@@ -163,14 +163,20 @@ export default function HomePage() {
               ].map(([icon, title, body], i) => (
                 <div
                   key={title}
-                  className={`flex items-center gap-3 px-3 py-3 ${
+                  className={`flex min-h-[86px] items-center gap-3 px-5 py-4 ${
                     i > 0 ? "sm:border-l sm:border-line" : ""
+                  } ${
+                    i > 1 ? "border-t border-line sm:border-t-0" : ""
                   }`}
                 >
                   <Icon name={icon as "users" | "star" | "shield" | "sparkle"} className="h-6 w-6 shrink-0 text-ink-2" />
-                  <div>
-                    <div className="text-xl font-bold text-brand">{title}</div>
-                    <div className="text-xs text-ink-2">{body}</div>
+                  <div className="min-w-0">
+                    <div className="whitespace-nowrap text-lg font-bold leading-tight text-brand sm:text-xl">
+                      {title}
+                    </div>
+                    <div className="mt-0.5 text-xs leading-snug text-ink-2">
+                      {body}
+                    </div>
                   </div>
                 </div>
               ))}
