@@ -91,13 +91,13 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#eef5fb] text-ink">
         <Image
-          src="/hero-doctor-wide.png"
+          src="/hero-doctor-office.png"
           alt="Premier Dentistry doctor in modern scrubs"
           fill
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[78%_top] sm:object-[84%_center] lg:object-center"
+          className="z-0 object-cover object-[70%_top] sm:object-center"
         />
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_50%,rgba(238,245,251,0.34)_68%,rgba(238,245,251,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
