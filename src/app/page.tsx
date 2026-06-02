@@ -99,7 +99,7 @@ export default function HomePage() {
           sizes="100vw"
           className="z-0 object-cover object-[78%_top] sm:object-[84%_center] lg:object-center"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_52%,rgba(238,245,251,0.58)_74%,rgba(238,245,251,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.96)_42%,rgba(238,245,251,0.54)_63%,rgba(238,245,251,0)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_50%,rgba(238,245,251,0.34)_68%,rgba(238,245,251,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 sm:min-h-[620px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
           <Reveal className="flex max-w-[670px] flex-col justify-center sm:min-h-[520px] lg:min-h-[585px]" y={16}>
