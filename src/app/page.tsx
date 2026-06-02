@@ -154,16 +154,16 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-8 grid max-w-[740px] grid-cols-2 overflow-hidden rounded-xl border border-line bg-white/94 shadow-soft backdrop-blur-sm sm:grid-cols-4">
+            <div className="mt-8 grid max-w-[760px] grid-cols-2 overflow-hidden rounded-xl border border-line bg-white/94 shadow-soft backdrop-blur-sm sm:grid-cols-4">
               {[
-                ["users", "Local", "Families Served"],
+                ["users", "500+", "Patients Served"],
                 ["star", "5.0", "Google Rating"],
-                ["shield", "Since 2011", "Practicing"],
-                ["sparkle", "Same-Day Options", ""],
+                ["shield", "20+", "Years Experience"],
+                ["sparkle", "Same-Day", "Treatment Options"],
               ].map(([icon, title, body], i) => (
                 <div
                   key={title}
-                  className={`flex min-h-[86px] items-center gap-3 px-5 py-4 ${
+                  className={`flex min-h-[78px] items-center gap-3 px-5 py-4 ${
                     i > 0 ? "sm:border-l sm:border-line" : ""
                   } ${
                     i > 1 ? "border-t border-line sm:border-t-0" : ""
@@ -174,11 +174,9 @@ export default function HomePage() {
                     <div className="whitespace-nowrap text-lg font-bold leading-tight text-brand sm:text-xl">
                       {title}
                     </div>
-                    {body ? (
-                      <div className="mt-0.5 text-xs leading-snug text-ink-2">
-                        {body}
-                      </div>
-                    ) : null}
+                    <div className="mt-0.5 whitespace-nowrap text-[11px] leading-snug text-ink-2">
+                      {body}
+                    </div>
                   </div>
                 </div>
               ))}
