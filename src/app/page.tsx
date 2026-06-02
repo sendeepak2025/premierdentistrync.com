@@ -159,7 +159,7 @@ export default function HomePage() {
                 ["users", "Local", "Families Served"],
                 ["star", "5.0", "Google Rating"],
                 ["shield", "Since 2011", "Practicing"],
-                ["sparkle", "Same-Day", "Treatment Options"],
+                ["sparkle", "Same-Day Options", ""],
               ].map(([icon, title, body], i) => (
                 <div
                   key={title}
@@ -174,9 +174,11 @@ export default function HomePage() {
                     <div className="whitespace-nowrap text-lg font-bold leading-tight text-brand sm:text-xl">
                       {title}
                     </div>
-                    <div className="mt-0.5 text-xs leading-snug text-ink-2">
-                      {body}
-                    </div>
+                    {body ? (
+                      <div className="mt-0.5 text-xs leading-snug text-ink-2">
+                        {body}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               ))}
