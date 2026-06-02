@@ -97,12 +97,12 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[36%_top] sm:object-center"
+          className="z-0 object-cover object-[36%_top] sm:object-[68%_top]"
         />
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_62%,rgba(247,251,255,0.94)_84%,rgba(238,245,251,0.34)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 pt-6 sm:min-h-[600px] sm:px-6 sm:pb-14 sm:pt-8 lg:min-h-[640px] lg:px-8">
-          <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[500px] lg:min-h-[545px]" y={16}>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-6 sm:min-h-[570px] sm:px-6 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-8">
+          <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
             <div className="hidden">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-semibold text-ink shadow-soft sm:px-4 sm:text-sm">
