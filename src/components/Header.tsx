@@ -102,8 +102,6 @@ export function Header() {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
-              <NavLink href="/" pathname={pathname}>Home</NavLink>
-
               {/* Services dropdown */}
               <div
                 className="relative"
@@ -162,7 +160,7 @@ export function Header() {
                       </div>
                       <div className="mt-4 pt-4 border-t border-line flex items-center justify-between">
                         <p className="text-xs text-muted">
-                          All 14 treatments under one roof.
+                          All 13 treatments under one roof.
                         </p>
                         <Link
                           href="/services"
@@ -331,8 +329,6 @@ export function Header() {
             </button>
           </div>
           <nav className="flex-1 overflow-y-auto py-2">
-            <MobileLink href="/" pathname={pathname}>Home</MobileLink>
-
             <div className="border-b border-line">
               <button
                 type="button"
