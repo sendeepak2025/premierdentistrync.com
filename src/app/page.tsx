@@ -93,7 +93,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#cfd2d5] text-ink">
         <Image
-          src="/hero-doctor-office.jfif"
+          src="/hero-doctor-wide.png"
           alt="Premier Dentistry doctor in modern scrubs"
           fill
           priority
