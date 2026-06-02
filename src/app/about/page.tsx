@@ -96,9 +96,9 @@ export default function AboutPage() {
               result you are proud of.
             </p>
             <p>
-              And because comfort is half the visit, we offer multiple sedation
-              options, gentle hygiene techniques, and a calm office designed to
-              feel more like a spa than a clinic.
+              And because comfort is half the visit, we offer nitrous oxide
+              options when appropriate, gentle hygiene techniques, and a calm
+              office designed to feel more like a spa than a clinic.
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 "Preventive & restorative focus",
                 "Cosmetic & implant dentistry",
                 "Root canal therapy",
-                "Sedation-trained",
+                "Comfort-focused care",
               ].map((b) => (
                 <li
                   key={b}

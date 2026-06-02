@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Premier Dentistry of Charlotte",
   },
   description:
-    "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book cleanings, Invisalign, implants, veneers, same-day crowns, emergency dental care, and sedation dentistry.",
+    "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book cleanings, Invisalign, implants, veneers, same-day crowns, emergency dental care, and nitrous oxide options.",
   keywords: [
     "Premier Dentistry Charlotte",
     "Premier Dentistry NC",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Invisalign Charlotte",
     "dental implants Charlotte",
     "cosmetic dentist Ballantyne",
-    "sedation dentistry Charlotte",
+    "nitrous oxide dentist Charlotte",
     "Dr. Anand Patel",
   ],
   authors: [{ name: "Premier Dentistry of Charlotte", url: siteUrl }],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Premier Dentistry of Charlotte | Ballantyne Dentist",
     description:
-      "Modern, gentle dentistry in Ballantyne, Charlotte NC. Same-day crowns, Invisalign, implants, emergency dental care, and sedation options.",
+      "Modern, gentle dentistry in Ballantyne, Charlotte NC. Same-day crowns, Invisalign, implants, emergency dental care, and nitrous oxide options.",
     type: "website",
     locale: "en_US",
     url: siteUrl,

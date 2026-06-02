@@ -15,7 +15,7 @@ import { absoluteUrl, jsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Ballantyne Dentist in Charlotte NC | Premier Dentistry",
   description:
-    "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book gentle family dentistry, same-day crowns, Invisalign, implants, veneers, emergency dental care, and sedation dentistry.",
+    "Premier Dentistry is a Ballantyne dentist in Charlotte NC led by Dr. Anand Patel, DDS. Book gentle family dentistry, same-day crowns, Invisalign, implants, veneers, emergency dental care, and nitrous oxide options.",
   alternates: { canonical: "/" },
   keywords: [
     "Ballantyne dentist",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Premier Dentistry | Ballantyne Dentist in Charlotte NC",
     description:
-      "Gentle, modern family, cosmetic, restorative, emergency, implant, Invisalign, and sedation dentistry in Ballantyne.",
+      "Gentle, modern family, cosmetic, restorative, emergency, implant, Invisalign, and nitrous oxide dental care in Ballantyne.",
     url: absoluteUrl("/"),
     type: "website",
     images: [
@@ -93,7 +93,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#cfd2d5] text-ink">
         <Image
-          src="/hero-doctor-gemini.webp"
+          src="/hero-doctor-office.jfif"
           alt="Premier Dentistry doctor in modern scrubs"
           fill
           priority
@@ -151,7 +151,7 @@ export default function HomePage() {
               {[
                 ["Same day", "CEREC crowns"],
                 ["Emergency", "Pain visits"],
-                ["14+", "Treatments"],
+                ["13", "Treatments"],
               ].map(([title, body]) => (
                 <div
                   key={title}
@@ -232,7 +232,7 @@ export default function HomePage() {
       </section>
 
       {/* COLORFUL SHOWCASE PREVIEW */}
-      <Section bg="white">
+      <Section bg="white" className="[&>div]:pt-8 sm:[&>div]:pt-16">
         <Reveal>
           <ServiceShowcase
             heading="Modern dental care in Ballantyne."
@@ -242,7 +242,7 @@ export default function HomePage() {
         <Reveal delay={120}>
           <div className="mt-12 flex justify-center">
             <Button href="/services" variant="secondary" size="lg">
-              Browse all 14 treatments in detail
+              Browse all 13 treatments in detail
               <Icon name="arrow-right" className="h-4 w-4" />
             </Button>
           </div>
@@ -445,7 +445,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-sm text-ink-2">
                   Mon – Thu 9 AM – 5 PM<br />
-                  Fri 9 AM – 2 PM (1st &amp; 3rd)
+                  Fri 8 AM – 1 PM (1st, 2nd &amp; 3rd)
                 </div>
               </div>
             </div>

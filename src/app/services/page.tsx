@@ -12,7 +12,7 @@ import { absoluteUrl, jsonLd } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Dental Services in Ballantyne, Charlotte NC",
   description:
-    "Explore dental services at Premier Dentistry in Ballantyne, Charlotte NC: cleanings, same-day crowns, Invisalign, implants, veneers, root canals, emergency dentistry, sedation, whitening, and more.",
+    "Explore dental services at Premier Dentistry in Ballantyne, Charlotte NC: cleanings, same-day crowns, Invisalign, implants, veneers, root canals, emergency dentistry, nitrous oxide, whitening, and more.",
   alternates: { canonical: "/services" },
   keywords: [
     "dental services Ballantyne",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dental Services in Ballantyne, Charlotte NC | Premier Dentistry",
     description:
-      "Family, cosmetic, restorative, emergency, implant, Invisalign, and sedation dental care from Dr. Anand Patel, DDS.",
+      "Family, cosmetic, restorative, emergency, implant, Invisalign, and nitrous oxide dental care from Dr. Anand Patel, DDS.",
     url: absoluteUrl("/services"),
     images: [
       {

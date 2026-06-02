@@ -25,7 +25,7 @@ export function StructuredData() {
         logo: absoluteUrl("/logo.png"),
         priceRange: "$$",
         description:
-          "Premier Dentistry is a modern dental practice in Ballantyne, Charlotte NC led by Dr. Anand Patel, DDS. The practice provides family, cosmetic, restorative, emergency, implant, Invisalign, same-day crown, and sedation dentistry.",
+          "Premier Dentistry is a modern dental practice in Ballantyne, Charlotte NC led by Dr. Anand Patel, DDS. The practice provides family, cosmetic, restorative, emergency, implant, Invisalign, same-day crown, and nitrous oxide dental care.",
         address: {
           "@type": "PostalAddress",
           streetAddress: `${site.address.line1}, ${site.address.line2}`,
@@ -49,9 +49,9 @@ export function StructuredData() {
           {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Friday"],
-            opens: "09:00",
-            closes: "14:00",
-            description: "1st and 3rd Friday of the month only.",
+            opens: "08:00",
+            closes: "13:00",
+            description: "1st, 2nd, and 3rd Friday of the month only.",
           },
         ],
         areaServed: site.serviceAreas.map((area) => ({
@@ -65,7 +65,7 @@ export function StructuredData() {
           "Emergency Dental Care",
           "Dental Implants",
           "Invisalign",
-          "Sedation Dentistry",
+          "Nitrous Oxide Dentistry",
         ],
         knowsAbout: [
           "Dental cleanings",

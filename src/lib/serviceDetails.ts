@@ -95,7 +95,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Come on in. The first visit will be longer and gentler — we may recommend a deeper cleaning if there is significant tartar — but we promise no lectures.",
       },
     ],
-    related: ["whitening", "fillings", "sedation"],
+    related: ["whitening", "fillings", "nitrous"],
   },
 
   "dental-crowns": {
@@ -261,7 +261,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Saving the natural tooth is often preferred when the tooth can be predictably restored. If extraction is the better option, we will explain replacement choices such as an implant, bridge, or partial denture.",
       },
     ],
-    related: ["dental-crowns", "emergency", "sedation"],
+    related: ["dental-crowns", "emergency", "nitrous"],
   },
 
   emergency: {
@@ -591,7 +591,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Yes if you have only local anesthesia. If you choose oral sedation, please arrange a ride.",
       },
     ],
-    related: ["implants", "sedation", "emergency"],
+    related: ["implants", "nitrous", "emergency"],
   },
 
   invisalign: {
@@ -849,7 +849,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Coverage varies — some plans cover nitrous for longer procedures or for specific patients. We will verify your benefits in advance.",
       },
     ],
-    related: ["sedation", "extractions", "root-canal"],
+    related: ["extractions", "root-canal"],
   },
 
   whitening: {
@@ -943,89 +943,6 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     related: ["veneers", "cleanings", "invisalign"],
   },
 
-  sedation: {
-    slug: "sedation",
-    hero: {
-      eyebrow: "Comfort",
-      title: "Sedation dentistry — for the patients who dread the chair.",
-      subtitle:
-        "Multiple levels of sedation, from mild relaxation to deeper rest — so you can get the care you have been postponing.",
-    },
-    overview: [
-      "Dental anxiety is real and far more common than people admit. With proper screening and monitoring, sedation dentistry can help many patients receive treatment in a more relaxed state instead of postponing care.",
-      "We offer multiple levels of sedation: nitrous oxide for light relaxation, oral sedation pills for moderate calm, and arrangements for IV sedation when deeper care is needed. The right choice depends on the procedure, your medical history, and how anxious you feel.",
-    ],
-    candidacy: {
-      title: "Sedation may be right for you if",
-      items: [
-        "You feel anxious before, during, or after dental visits",
-        "You have a strong gag reflex that makes treatment difficult",
-        "You need a long procedure done in one comfortable visit",
-        "You have had a bad dental experience in the past",
-        "Local anesthesia alone has not been enough in the past",
-        "You have trouble sitting still for extended treatments",
-      ],
-    },
-    process: {
-      title: "How we choose the right level",
-      steps: [
-        {
-          title: "1 · Conversation",
-          body: "We listen to what specifically worries you. Sometimes a calmer setting and clear explanations are enough.",
-        },
-        {
-          title: "2 · Medical review",
-          body: "We review your medical history, current medications, and any concerns before recommending a sedation level.",
-        },
-        {
-          title: "3 · Choose the level",
-          body: "Nitrous for light relaxation, oral sedation for deeper calm, or referral for IV sedation when appropriate.",
-        },
-        {
-          title: "4 · Treatment in comfort",
-          body: "Care is delivered while you are calm — local anesthesia is still used so nothing is uncomfortable physically.",
-        },
-        {
-          title: "5 · Safe recovery",
-          body: "Nitrous by itself usually wears off quickly; oral or IV sedation requires a responsible adult to drive you and a quiet afternoon.",
-        },
-      ],
-    },
-    benefits: {
-      title: "Why sedation makes sense",
-      items: [
-        "Lets you finally complete care you have been avoiding",
-        "Longer procedures finish in fewer visits",
-        "Memory of the procedure is often hazy or absent",
-        "Reduces gag reflex during back-of-mouth work",
-        "Designed around screening, monitoring, and the lightest effective level",
-        "Multiple levels so you only get as much as you need",
-      ],
-    },
-    aftercare: {
-      title: "What to expect afterward",
-      body: "Nitrous usually wears off quickly, and we will confirm whether you can drive yourself. Oral sedation requires someone to drive you and a quiet rest of the day. Avoid making important decisions, driving, or signing contracts for 24 hours after oral sedation.",
-    },
-    faqs: [
-      {
-        q: "Will I be asleep?",
-        a: "Not with nitrous or most oral sedation — you will be awake but deeply relaxed. IV sedation reaches a deeper level where you may not remember much.",
-      },
-      {
-        q: "Is sedation dentistry safe?",
-        a: "Sedation can be safe for many patients with proper screening, dosing, and monitoring. We review your medical history carefully and choose the lightest appropriate level.",
-      },
-      {
-        q: "Will I need someone to drive me?",
-        a: "Not usually for nitrous by itself once you feel fully recovered. Oral sedation requires a driver and a quiet day. We will tell you exactly what to plan.",
-      },
-      {
-        q: "Will insurance cover sedation?",
-        a: "Insurance coverage for sedation varies — some plans cover it for specific procedures or for patients with documented anxiety. We will check your benefits in advance.",
-      },
-    ],
-    related: ["nitrous", "extractions", "root-canal"],
-  },
 
   "sleep-apnea": {
     slug: "sleep-apnea",
@@ -1108,7 +1025,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Long-term wear can subtly affect bite over years — which is why we monitor with regular follow-ups and adjust as needed.",
       },
     ],
-    related: ["cleanings", "sedation", "nitrous"],
+    related: ["cleanings", "nitrous"],
   },
 
   implants: {

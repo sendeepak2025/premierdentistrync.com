@@ -31,7 +31,7 @@ export const site = {
     { day: "Tuesday", time: "9:00 AM – 5:00 PM" },
     { day: "Wednesday", time: "9:00 AM – 5:00 PM" },
     { day: "Thursday", time: "9:00 AM – 5:00 PM" },
-    { day: "Friday", time: "9:00 AM – 2:00 PM (1st & 3rd)" },
+    { day: "Friday", time: "8:00 AM – 1:00 PM (1st, 2nd & 3rd)" },
     { day: "Sat – Sun", time: "Closed" },
   ],
   social: {
@@ -225,16 +225,6 @@ export const services: Service[] = [
     blurb:
       "Dentist-supervised whitening with custom guidance for brighter results and sensitivity management.",
     long: "Choose an in-office treatment for a single-visit result, or take-home trays for a gradual lift you control. We adjust the plan to your teeth and talk through sensitivity before treatment.",
-  },
-  {
-    slug: "sedation",
-    title: "Sedation Dentistry",
-    shortTitle: "Sedation",
-    icon: "moon",
-    category: "Specialty",
-    blurb:
-      "From mild relaxation to deeper sedation, with options selected around your health history and procedure.",
-    long: "We will talk through the levels of sedation that may be appropriate, review your medical history, and choose a conservative option for the care you need.",
   },
   {
     slug: "sleep-apnea",

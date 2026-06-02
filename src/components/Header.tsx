@@ -59,7 +59,7 @@ export function Header() {
           </span>
           <div className="hidden md:inline-flex items-center gap-1.5 text-white/70">
             <Icon name="clock" className="h-3.5 w-3.5" />
-            Mon – Thu 9–5 · Fri 9–2 (1st & 3rd)
+            Mon – Thu 9–5 · Fri 8–1 (1st, 2nd & 3rd)
           </div>
           <div className="md:hidden inline-flex items-center gap-1 text-white/70 truncate">
             <Icon name="map-pin" className="h-3.5 w-3.5 shrink-0" />
