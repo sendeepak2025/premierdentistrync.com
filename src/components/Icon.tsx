@@ -13,6 +13,7 @@ type IconName =
   | "moon"
   | "bed"
   | "anchor"
+  | "tooth"
   | "phone"
   | "mail"
   | "map-pin"
@@ -130,6 +131,12 @@ export function Icon({ name, className = "h-5 w-5", strokeWidth = 1.6 }: Props) 
         <svg {...common}>
           <circle cx="12" cy="5" r="2" />
           <path d="M12 7v14M5 14a7 7 0 0014 0M3 14h4M17 14h4" />
+        </svg>
+      );
+    case "tooth":
+      return (
+        <svg {...common}>
+          <path d="M7.2 3.6c1.3-.7 2.7-.4 3.8.2.6.3 1.4.3 2 0 1.1-.6 2.5-.9 3.8-.2 2.2 1.2 2.8 4.2 1.9 6.7l-2.2 6.3c-.5 1.5-1.2 3.4-2.5 3.4-1.1 0-1.2-1.6-1.5-3.3-.2-1.2-.4-2.1-.5-2.7-.2-.8-1.8-.8-2 0-.1.6-.3 1.5-.5 2.7-.3 1.7-.4 3.3-1.5 3.3-1.3 0-2-1.9-2.5-3.4l-2.2-6.3c-.9-2.5-.3-5.5 1.9-6.7z" />
         </svg>
       );
     case "phone":

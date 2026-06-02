@@ -159,7 +159,7 @@ export default function HomePage() {
                 ["users", "500+", "Patients Served"],
                 ["star", "5.0", "Google Rating"],
                 ["shield", "20+", "Years Experience"],
-                ["sparkle", "Same-Day", "Treatment Options"],
+                ["tooth", "Same-Day", "Treatment Options"],
               ].map(([icon, title, body], i) => (
                 <div
                   key={title}
@@ -169,7 +169,7 @@ export default function HomePage() {
                     i > 1 ? "border-t border-line sm:border-t-0" : ""
                   }`}
                 >
-                  <Icon name={icon as "users" | "star" | "shield" | "sparkle"} className="h-6 w-6 shrink-0 text-ink-2" />
+                  <Icon name={icon as "users" | "star" | "shield" | "tooth"} className="h-6 w-6 shrink-0 text-ink-2" />
                   <div className="min-w-0">
                     <div className="whitespace-nowrap text-lg font-bold leading-tight text-brand sm:text-xl">
                       {title}
