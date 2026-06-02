@@ -32,7 +32,7 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="lg:col-span-5">
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <a
                   href={site.phoneHref}
                   className="bg-white rounded-2xl p-5 border border-line shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all"
@@ -41,7 +41,7 @@ export default function ContactPage() {
                   <div className="mt-3 text-xs uppercase tracking-[0.15em] text-muted">
                     Call
                   </div>
-                  <div className="mt-1 font-display text-xl text-ink">
+                  <div className="mt-1 font-display text-xl text-ink whitespace-nowrap">
                     {site.phone}
                   </div>
                 </a>
@@ -53,17 +53,17 @@ export default function ContactPage() {
                   <div className="mt-3 text-xs uppercase tracking-[0.15em] text-muted">
                     Email
                   </div>
-                  <div className="mt-1 font-display text-base text-ink break-all">
+                  <div className="mt-1 text-base font-semibold leading-6 text-ink break-words">
                     {site.email}
                   </div>
                 </a>
-                <div className="bg-white rounded-2xl p-5 border border-line shadow-soft col-span-2">
-                  <div className="flex items-center gap-4 text-sm">
+                <div className="bg-white rounded-2xl p-5 border border-line shadow-soft sm:col-span-2">
+                  <div className="grid gap-3 text-sm sm:grid-cols-[auto_auto_1fr] sm:items-center sm:gap-4">
                     <span className="text-xs uppercase tracking-[0.15em] text-muted shrink-0">
                       Fax
                     </span>
-                    <span className="font-medium text-ink">{site.fax}</span>
-                    <span className="ml-auto text-xs text-muted">
+                    <span className="font-medium text-ink whitespace-nowrap">{site.fax}</span>
+                    <span className="text-xs leading-5 text-muted sm:ml-auto sm:text-right">
                       Serving Ballantyne, South Charlotte &amp; Indian Land
                     </span>
                   </div>
