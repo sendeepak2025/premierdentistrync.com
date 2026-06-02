@@ -97,7 +97,7 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[36%_top] sm:object-[68%_top]"
+          className="z-0 object-cover object-[36%_top] sm:object-[68%_34%]"
         />
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_62%,rgba(247,251,255,0.94)_84%,rgba(238,245,251,0.34)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
