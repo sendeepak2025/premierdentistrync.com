@@ -129,10 +129,11 @@ export default function ServicesPage() {
             Dental Treatments
           </h1>
           <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-2xl">
-            Today&apos;s advanced dental treatments restore a healthier, more
-            complete smile that can last you a lifetime. Dr. Patel and the
-            Premier team handle everything from routine cleanings to full
-            smile makeovers — explained clearly, planned with care.
+            Today&apos;s advanced dental treatments can restore a healthier,
+            more complete smile with results designed for long-term function.
+            Dr. Patel and the Premier team handle everything from routine
+            cleanings to full smile makeovers — explained clearly, planned
+            with care.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/contact" size="lg" variant="white">

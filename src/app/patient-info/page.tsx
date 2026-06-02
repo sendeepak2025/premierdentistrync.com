@@ -10,7 +10,7 @@ import { educationTopics, educationOrder } from "@/lib/patientEducation";
 export const metadata: Metadata = {
   title: "Patient Info — First Visit, Insurance & Financing",
   description:
-    "Everything new patients need: what to bring on your first visit, insurance accepted, PremierCare savings plan, financial policy, and the technology behind your care.",
+    "Everything new patients need: what to bring on your first visit, insurance estimates, PremierCare savings plan details, financial policy, and the technology behind your care.",
   alternates: { canonical: "/patient-info" },
 };
 
@@ -54,7 +54,7 @@ export default function PatientInfoPage() {
           </p>
           <p className="mt-6 text-lg text-white/85 leading-relaxed max-w-2xl">
             We have answered the most common questions up front — what to bring,
-            what we charge, what insurance covers, and the tools we use behind
+            how estimates work, how insurance is verified, and the tools we use behind
             the chair. If anything is unclear, call us at{" "}
             <a href={site.phoneHref} className="text-white font-medium underline underline-offset-2 hover:text-accent">
               {site.phone}
@@ -84,8 +84,8 @@ export default function PatientInfoPage() {
             <p className="mt-5 text-ink-2 leading-relaxed">
               A new-patient appointment is about an hour long. We use that time
               to learn your dental history, complete a careful exam with digital
-              imaging, and discuss anything that needs attention — without rush
-              or pressure.
+              imaging when clinically useful, and discuss anything that needs
+              attention clearly and without pressure.
             </p>
             <p className="mt-4 text-ink-2 leading-relaxed">
               Please plan to arrive about 15 minutes early so we can get your
@@ -174,7 +174,7 @@ export default function PatientInfoPage() {
               </div>
               <h3 className="font-display text-lg text-ink">Email me the forms</h3>
               <p className="mt-2 text-sm text-ink-2">
-                We will reply with a digital intake link the same business day.
+                We will reply with a digital intake link as soon as our team is able.
               </p>
             </a>
             <a
@@ -199,12 +199,13 @@ export default function PatientInfoPage() {
           <div className="lg:col-span-5">
             <Eyebrow>Insurance accepted</Eyebrow>
             <Heading className="mt-3">
-              We work with most PPO insurance plans.
+              We work with many PPO insurance plans.
             </Heading>
             <p className="mt-5 text-ink-2 leading-relaxed">
               Our front desk will verify your benefits before your visit so you
-              know your coverage and out-of-pocket estimate up front. If you do
-              not see your plan listed, call us — chances are we still file it.
+              understand your estimated coverage and out-of-pocket portion before
+              treatment. If you do not see your plan listed, call us and we can
+              check whether we are able to file it.
             </p>
             <div className="mt-6 space-y-3">
               <Button href="/contact">
@@ -242,9 +243,9 @@ export default function PatientInfoPage() {
             </Heading>
             <p className="mt-5 text-ink-2 leading-relaxed">
               Our in-house membership plan was designed for patients without
-              dental insurance. For a single annual fee, you get covered
-              preventive care plus meaningful discounts on the treatments you
-              may need — no deductibles, no waiting periods, no maximums.
+              dental insurance. For a single annual fee, members receive
+              preventive care and discounts on many treatments, based on the
+              current plan terms.
             </p>
 
             <ul className="mt-6 grid sm:grid-cols-2 gap-3 max-w-xl">
@@ -252,8 +253,8 @@ export default function PatientInfoPage() {
                 "Covered cleanings & exams",
                 "Routine X-rays included",
                 "Discount on most treatments",
-                "No claim forms or pre-approvals",
-                "Active immediately on enrollment",
+                "No dental insurance claim forms",
+                "Ask us for current enrollment terms",
                 "Family pricing available",
               ].map((b) => (
                 <li
@@ -280,7 +281,7 @@ export default function PatientInfoPage() {
                 PremierCare Plan
               </div>
               <div className="mt-2 font-display text-3xl text-ink">
-                Membership that pays for itself.
+                A simpler way to plan preventive care.
               </div>
               <div className="mt-6 space-y-3">
                 {[
@@ -325,7 +326,7 @@ export default function PatientInfoPage() {
               {
                 icon: "check" as const,
                 t: "Up-front estimates",
-                b: "Treatment plans include your insurance estimate and out-of-pocket projection.",
+                b: "Treatment plans include your estimated insurance benefit and out-of-pocket projection when benefits are available.",
               },
               {
                 icon: "shield" as const,
@@ -340,7 +341,7 @@ export default function PatientInfoPage() {
               {
                 icon: "users" as const,
                 t: "We file your claims",
-                b: "Our team submits and follows up with your insurance so you don&apos;t have to.",
+                b: "Our team submits many dental claims and follows up with insurance when plan rules allow.",
               },
             ].map((c) => (
               <div
@@ -367,8 +368,8 @@ export default function PatientInfoPage() {
           <Eyebrow>The tools behind your care</Eyebrow>
           <Heading className="mt-3">Modern technology, gentler dentistry.</Heading>
           <p className="mt-5 text-ink-2">
-            Better instruments mean shorter visits, smaller restorations, and
-            results that last. Here is what you will see at Premier.
+            Better instruments can make care easier to understand and more
+            comfortable to plan. Here is what you may see at Premier.
           </p>
         </div>
 
@@ -377,22 +378,22 @@ export default function PatientInfoPage() {
             {
               icon: "sparkle" as const,
               t: "CEREC same-day crowns",
-              b: "Digital scan, in-office milling, and bonding in one visit — no second appointment.",
+              b: "Digital scan, in-office milling, and bonding in one visit for many appropriate cases.",
             },
             {
               icon: "heartbeat" as const,
               t: "3D digital X-rays",
-              b: "Up to 80% less radiation than traditional film, with sharper, instant images.",
+              b: "Digital imaging helps us capture diagnostic images quickly while following radiation-safety guidelines.",
             },
             {
               icon: "shield" as const,
               t: "3D implant planning",
-              b: "We use 3D imaging and printed surgical guides to plan implants with precision.",
+              b: "We use 3D imaging and printed surgical guides when they are useful for implant planning.",
             },
             {
               icon: "wind" as const,
               t: "Electric handpieces",
-              b: "Quieter, smoother, and gentler than air-driven drills — many patients notice immediately.",
+              b: "Designed to be quieter and smoother than many air-driven handpieces.",
             },
             {
               icon: "smile" as const,
@@ -402,7 +403,7 @@ export default function PatientInfoPage() {
             {
               icon: "diamond" as const,
               t: "Digital impressions",
-              b: "Goodbye, putty trays. A quick wand-style scan is faster, more accurate, and far more comfortable.",
+              b: "A wand-style scan can replace putty impressions for many cases and helps us plan restorations digitally.",
             },
           ].map((t) => (
             <div

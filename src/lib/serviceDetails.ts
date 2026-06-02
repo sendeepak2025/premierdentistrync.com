@@ -24,7 +24,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "Twice-a-year cleanings keep your smile bright, your gums healthy, and small problems from turning into big ones.",
     },
     overview: [
-      "A professional cleaning removes the hardened plaque (called tartar or calculus) that even the best home brushing cannot reach. Combined with a careful exam, low-radiation digital X-rays, and an oral cancer screening, your six-month visit is the single most cost-effective thing you can do for your long-term oral health.",
+      "A professional cleaning removes the hardened plaque (called tartar or calculus) that even the best home brushing cannot reach. Combined with a careful exam, appropriate digital X-rays, and an oral cancer screening, your routine visit is one of the most cost-effective ways to support long-term oral health.",
       "Our hygienists work with a gentle ultrasonic scaler followed by a careful hand finish and a polish. If you have not been in for a while, do not worry — there is no judgment here, just a friendly catch-up and a plan to get you back on track.",
     ],
     candidacy: {
@@ -66,10 +66,10 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       title: "Why it matters",
       items: [
         "Catches cavities while they are still tiny and easy to fix",
-        "Prevents gum disease — the leading cause of adult tooth loss",
+        "Helps reduce the risk of gum disease — a leading cause of adult tooth loss",
         "Removes coffee, tea, and wine stains for a brighter smile",
         "Early oral cancer screening included",
-        "Saves significant money long-term by avoiding bigger procedures",
+        "Can reduce long-term costs by catching problems earlier",
         "Better breath, calmer gums, and fewer dental surprises",
       ],
     },
@@ -84,11 +84,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Will a cleaning hurt?",
-        a: "Routine cleanings are not painful for most patients. If you have sensitive teeth or a lot of tartar build-up, let us know and we can adjust technique or use a topical numbing gel.",
+        a: "Routine cleanings are usually comfortable for most patients. If you have sensitive teeth or a lot of tartar build-up, let us know and we can adjust technique or use a topical numbing gel.",
       },
       {
         q: "Do I really need X-rays at every visit?",
-        a: "No — typically we take a small set of bitewing X-rays once a year and a fuller series every few years. We never take X-rays you do not need.",
+        a: "No — typically we take a small set of bitewing X-rays once a year and a fuller series every few years, depending on your oral health and risk factors. We only recommend X-rays when they are clinically useful.",
       },
       {
         q: "What if I have not been to the dentist in years?",
@@ -104,7 +104,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Restorative · CEREC Technology",
       title: "Same-day dental crowns with CEREC.",
       subtitle:
-        "A precise porcelain crown — designed, milled, and bonded in a single visit. No second appointment, no two-week temporary.",
+        "A porcelain crown designed, milled, and bonded in a single visit for many cases — often without a two-week temporary.",
     },
     overview: [
       "A dental crown is a custom cap that covers a tooth that has been weakened by a large filling, a fracture, or a root canal. It restores strength, shape, and bite — and when done well, looks indistinguishable from the natural teeth around it.",
@@ -141,7 +141,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "5 · Bond & adjust",
-          body: "The crown is bonded into place, your bite is checked and refined, and you walk out fully restored.",
+          body: "The crown is bonded into place, your bite is checked and refined, and you leave with the restoration in place.",
         },
       ],
     },
@@ -153,7 +153,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "No temporary crown to live with for two weeks",
         "Solid porcelain — strong and lifelike, no metal underneath",
         "Bite refined live in the chair for ideal comfort",
-        "Same-day means same-day relief if the tooth was hurting",
+        "Same-day treatment can mean fewer visits and faster stabilization when a tooth is bothering you",
       ],
     },
     aftercare: {
@@ -167,7 +167,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Is a same-day crown as strong as a lab crown?",
-        a: "Yes. Modern CEREC porcelain is exceptionally strong and is the same material used in many lab-made crowns.",
+        a: "Modern CEREC ceramic is designed for durable, lifelike restorations in appropriate cases. Dr. Patel will recommend the material and workflow that fit your tooth and bite.",
       },
       {
         q: "Does insurance cover crowns?",
@@ -175,7 +175,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Will my crown match my other teeth?",
-        a: "Yes. We match shade and translucency right at the bench so the crown blends with the teeth next to it.",
+        a: "We shade-match and adjust the restoration so it blends as naturally as possible with the teeth next to it.",
       },
     ],
     related: ["root-canal", "implants", "veneers"],
@@ -187,11 +187,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Restorative",
       title: "Non-surgical root canals — saving teeth, comfortably.",
       subtitle:
-        "Root canal therapy ends infection and pain while preserving the natural tooth — often in a single appointment.",
+        "Root canal therapy treats infection and helps relieve pain while preserving the natural tooth when it can be predictably saved.",
     },
     overview: [
-      "A root canal is recommended when the pulp inside a tooth becomes infected or inflamed — usually from deep decay, a crack, or trauma. The procedure removes the infected tissue, cleans the inside of the tooth, and seals it. Despite the reputation, modern root canals feel a lot like a routine filling and almost always end the pain rather than cause it.",
-      "We use rotary instruments and 3D imaging to treat the tooth efficiently and gently. Most patients leave the visit relieved that the discomfort they walked in with is already starting to fade.",
+      "A root canal is recommended when the pulp inside a tooth becomes infected or inflamed — usually from deep decay, a crack, or trauma. The procedure removes infected or inflamed tissue, cleans the inside of the tooth, and seals it. Despite the reputation, modern root canals are usually performed with local anesthesia and are intended to relieve the pain caused by infection.",
+      "We use rotary instruments and 3D imaging to treat the tooth efficiently and gently. Many patients notice that the discomfort from the infected tooth starts improving after treatment.",
     ],
     candidacy: {
       title: "Signs you may need a root canal",
@@ -213,7 +213,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "2 · Numb & isolate",
-          body: "Full local anesthesia means you should feel pressure but no pain. A small dental dam keeps the area clean and dry.",
+          body: "Local anesthesia is used so the tooth should be numb during treatment. A small dental dam keeps the area clean and dry.",
         },
         {
           title: "3 · Clean the canals",
@@ -221,7 +221,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "4 · Seal",
-          body: "The canals are filled with a biocompatible material that prevents reinfection.",
+          body: "The canals are filled with a biocompatible material that helps seal the space against future infection.",
         },
         {
           title: "5 · Crown plan",
@@ -233,20 +233,20 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       title: "Why save the tooth",
       items: [
         "Keeps your natural tooth and root in place",
-        "Ends the infection and the pain that came with it",
-        "Faster and less expensive than extracting and replacing the tooth",
+        "Treats the infection and is intended to relieve the pain that came with it",
+        "Often less involved than extracting and replacing the tooth",
         "Preserves your bite and the bone around the tooth",
         "Modern technique feels routine — most patients are surprised how easy it is",
       ],
     },
     aftercare: {
       title: "After your root canal",
-      body: "Mild soreness for a day or two is normal — ibuprofen handles it for most patients. Avoid chewing directly on the treated tooth until the crown is placed. Call us if discomfort increases instead of fading.",
+      body: "Mild soreness for a day or two is common. We will review appropriate over-the-counter pain relief based on your health history. Avoid chewing directly on the treated tooth until the final restoration is placed. Call us if discomfort increases instead of fading.",
     },
     faqs: [
       {
         q: "Does a root canal hurt?",
-        a: "No. The procedure itself feels like a routine filling thanks to modern numbing and gentle technique. The pain you walked in with usually starts to ease within hours.",
+        a: "With modern local anesthesia, the procedure is usually comfortable and often feels similar to a filling. The pain caused by the infected tooth usually starts to ease after treatment, though soreness can vary.",
       },
       {
         q: "How long does it take?",
@@ -254,11 +254,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Do I really need a crown after?",
-        a: "For back teeth, almost always — a treated tooth becomes brittle and needs the protection of a crown to avoid fracture.",
+        a: "Back teeth often need a crown after root canal treatment because they absorb heavy chewing forces. We will explain whether a crown or another restoration is best for your tooth.",
       },
       {
         q: "Is it better to just pull the tooth?",
-        a: "Saving the natural tooth is almost always preferable. Extraction means either living with a gap, getting a bridge, or placing an implant — all of which are more involved than a root canal.",
+        a: "Saving the natural tooth is often preferred when the tooth can be predictably restored. If extraction is the better option, we will explain replacement choices such as an implant, bridge, or partial denture.",
       },
     ],
     related: ["dental-crowns", "emergency", "sedation"],
@@ -301,7 +301,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "3 · Same-day treatment",
-          body: "When possible, we treat in the same visit — temporary or final restoration, antibiotics if infection is present, or a referral if surgical care is needed.",
+          body: "When possible, we treat in the same visit — temporary or final restoration, medication when clinically appropriate, or a referral if surgical care is needed.",
         },
         {
           title: "4 · Follow-up plan",
@@ -321,7 +321,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     },
     aftercare: {
       title: "Until you can get to us",
-      body: "Rinse gently with warm salt water. For a knocked-out adult tooth, hold the tooth by the crown (not the root), rinse it gently with milk if available, and try to place it back in the socket — or transport in milk. Apply a cold compress for swelling. Take ibuprofen if you can tolerate it.",
+      body: "Rinse gently with warm salt water. For a knocked-out adult tooth, hold the tooth by the crown (not the root), gently rinse debris with water, and try to place it back in the socket if you can do so safely — or keep it moist in milk, saliva, or a tooth-preservation kit. Apply a cold compress for swelling. Use over-the-counter pain relief only if you can safely take it and follow the label.",
     },
     faqs: [
       {
@@ -334,11 +334,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Is a dental emergency cheaper than the ER?",
-        a: "Almost always yes — and the ER usually cannot fix the underlying dental problem. They will give you pain medication and tell you to call a dentist.",
+        a: "Often, yes — and the ER usually cannot fix the underlying dental problem. For swelling, fever, trauma, uncontrolled bleeding, or trouble breathing or swallowing, emergency medical care may still be necessary.",
       },
       {
         q: "Will insurance cover an emergency visit?",
-        a: "Most dental insurance covers emergency exams and many of the treatments needed. Bring your card and we will verify on the spot.",
+        a: "Many dental plans cover emergency exams and some related treatment. Bring your card and we will verify your benefits before care whenever possible.",
       },
     ],
     related: ["root-canal", "extractions", "dental-crowns"],
@@ -353,7 +353,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "Hand-crafted porcelain shells that brighten, straighten, and balance the front teeth you show the world.",
     },
     overview: [
-      "A porcelain veneer is a thin, custom-fitted shell of dental porcelain that bonds to the front of a tooth. Veneers can correct stains that whitening will not lift, close small gaps, even out chipped edges, and reshape teeth that have always bothered you — all while looking completely natural.",
+      "A porcelain veneer is a thin, custom-fitted shell of dental porcelain that bonds to the front of a tooth. Veneers can improve stains that whitening will not lift, close small gaps, even out chipped edges, and reshape teeth that have always bothered you — while aiming for a natural-looking result.",
       "We design veneers around your face, your bite, and the way you smile in conversation — not from a generic catalog. The result is teeth that look like the best version of yours, not someone else's.",
     ],
     candidacy: {
@@ -418,7 +418,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Is the process reversible?",
-        a: "Because a small amount of enamel is shaped, veneers are considered a permanent restoration. We will walk through alternatives so you can choose with full information.",
+        a: "Because a small amount of enamel is shaped, veneers are not considered reversible. We will walk through alternatives so you can choose with full information.",
       },
       {
         q: "Do veneers stain?",
@@ -438,7 +438,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     },
     overview: [
       "A filling restores a tooth after a cavity is removed. Bonding uses the same material to repair small chips or close minor gaps in a single visit. Both are quick, conservative, and almost invisible when done with care.",
-      "We use modern composite resin — never amalgam (the silver-mercury blend used in years past). Composite is mercury-free, bonds directly to the tooth, and is shaded to match your enamel.",
+      "We use modern composite resin instead of amalgam (the silver-mercury blend used in years past). Composite is mercury-free, bonds directly to the tooth, and is shaded to match your enamel.",
     ],
     candidacy: {
       title: "When fillings or bonding help",
@@ -455,7 +455,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       steps: [
         {
           title: "1 · Numb gently",
-          body: "Topical gel first, then a careful injection. Most patients barely feel it.",
+          body: "Topical gel first, then a careful injection. We move slowly and adjust technique for comfort.",
         },
         {
           title: "2 · Remove decay",
@@ -493,7 +493,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "Can old silver fillings be replaced?",
-        a: "Yes — and many patients ask us to do exactly that when the old ones start to fail. We remove them safely and replace with composite.",
+        a: "Yes, when replacement is clinically appropriate — for example, if an old filling is failing, leaking, or has decay around it. If an existing filling is healthy and stable, we usually monitor it rather than replace it unnecessarily.",
       },
       {
         q: "How long does a composite filling last?",
@@ -659,7 +659,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     },
     aftercare: {
       title: "Maintaining your new smile",
-      body: "Wear your retainer as directed — typically nightly forever. Teeth want to drift back to their original positions, and the retainer is what stops that. Continue six-month cleanings and watch your smile last for decades.",
+      body: "Wear your retainer as directed. Many patients need long-term nighttime retainer wear because teeth can drift over time. Continue regular cleanings and follow-up visits so we can monitor your bite and alignment.",
     },
     faqs: [
       {
@@ -755,7 +755,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Are implant-stabilized dentures worth it?",
-        a: "For many patients, absolutely. Two implants on the lower arch can completely change comfort and confidence — no more rocking or adhesive.",
+        a: "For many patients, they can make a major difference. Two implants on the lower arch can improve stability and reduce reliance on adhesive, depending on your anatomy and denture design.",
       },
       {
         q: "How often do dentures need to be replaced?",
@@ -775,11 +775,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Comfort",
       title: "Nitrous oxide — gentle relaxation that wears off fast.",
       subtitle:
-        "A light, breathable sedation option that eases nerves without lingering effects. You drive yourself home.",
+        "A light, breathable sedation option that can ease nerves and wears off quickly for most patients.",
     },
     overview: [
-      "Nitrous oxide — sometimes called laughing gas — is one of the safest and most predictable sedation options in dentistry. You breathe a gentle mix of nitrous and oxygen through a small soft mask over your nose. Within minutes you feel calmer, lighter, and somewhat detached from the procedure — without losing consciousness.",
-      "The big advantage is how quickly it wears off. Within five minutes of removing the mask you are back to normal and can drive yourself home, return to work, or pick up the kids.",
+      "Nitrous oxide — sometimes called laughing gas — is a commonly used sedation option in dentistry and can be safe and effective when used appropriately. You breathe a carefully controlled mix of nitrous and oxygen through a small soft mask over your nose. Within minutes, many patients feel calmer and lighter without losing consciousness.",
+      "The big advantage is how quickly it wears off for most people. We will confirm that you feel back to normal before you leave and discuss whether driving or returning to normal activities is appropriate for your visit.",
     ],
     candidacy: {
       title: "Nitrous is a great fit for",
@@ -812,7 +812,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "5 · Five-minute oxygen",
-          body: "At the end, you breathe pure oxygen for a few minutes. Nitrous effects clear quickly and completely.",
+          body: "At the end, you breathe oxygen for a few minutes while the nitrous wears off. We make sure you feel steady before you leave.",
         },
       ],
     },
@@ -820,16 +820,16 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       title: "Why nitrous is so popular",
       items: [
         "Fast onset — you feel it within minutes",
-        "Wears off completely in 5 minutes after we stop the gas",
-        "You can drive yourself home and resume your day",
-        "Excellent safety record — used in dentistry for over 150 years",
+        "Wears off quickly for most patients after we stop the gas",
+        "No driver is usually needed when nitrous is used by itself and you feel fully recovered",
+        "Long track record in dentistry when used with proper screening and equipment",
         "Adjustable throughout the visit if you need a little more or less",
-        "Often covers anxiety without needing oral or IV sedation",
+        "May ease anxiety without needing oral or IV sedation",
       ],
     },
     aftercare: {
       title: "After your visit",
-      body: "There is essentially no recovery. Most patients feel completely normal within five minutes of removing the mask. You can eat normally and resume any activity.",
+      body: "Recovery is usually brief. Most patients feel normal soon after the mask is removed, but we will confirm you are steady and review any visit-specific instructions before you leave.",
     },
     faqs: [
       {
@@ -841,8 +841,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         a: "Yes — nitrous does not erase memory. You may notice the time feels like it passed quickly.",
       },
       {
-        q: "Is it safe for kids?",
-        a: "Yes — nitrous is one of the most studied sedation methods in pediatric dentistry. We will discuss appropriateness based on your child's age and comfort with the mask.",
+        q: "Is it appropriate for kids?",
+        a: "Nitrous can be appropriate for some children, but it depends on age, health history, ability to breathe through the nose, and comfort with the mask. We will discuss whether it fits your child.",
       },
       {
         q: "Will my insurance cover nitrous?",
@@ -858,11 +858,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Cosmetic",
       title: "Professional teeth whitening that actually works.",
       subtitle:
-        "Brighter, more even results than anything off the shelf — with less sensitivity and a finish that lasts.",
+        "Dentist-supervised whitening for brighter, more even results with a plan to manage sensitivity.",
     },
     overview: [
-      "Years of coffee, tea, red wine, and just life can leave teeth looking a few shades darker than they used to. Professional whitening uses higher-concentration whitening gels — carefully applied — to safely lift years of stain in a fraction of the time over-the-counter strips would take.",
-      "We offer two options: an in-office treatment that gets you brighter in a single visit, and custom take-home trays for a gradual, controllable lift you do on your own time. Both produce lasting results when done right.",
+      "Years of coffee, tea, red wine, and just life can leave teeth looking a few shades darker than they used to. Professional whitening uses carefully applied whitening gels and dental supervision to reduce avoidable gum irritation and sensitivity.",
+      "We offer two options: an in-office treatment for a faster result, and custom take-home trays for a gradual, controllable lift you do on your own time. Results vary by starting shade, stain type, habits, and enamel condition.",
     ],
     candidacy: {
       title: "Whitening works well on",
@@ -908,10 +908,10 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       items: [
         "Stronger, dentist-grade whitening gel",
         "Custom trays fit your teeth exactly — no gel on the gums",
-        "Significantly less sensitivity than mass-market strips",
-        "Even, predictable result — not patchy",
-        "Safe enamel impact under professional supervision",
-        "Lasts much longer than drugstore options",
+        "Custom fit that helps keep whitening gel where it belongs",
+        "More controlled application than one-size-fits-all strips",
+        "Professional screening for cavities, gum irritation, and sensitivity risk",
+        "Maintenance guidance to help results last longer",
       ],
     },
     aftercare: {
@@ -921,11 +921,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How white can my teeth get?",
-        a: "Most patients lift 4 to 8 shades. The starting shade and stain type affect the maximum brightness. We will set realistic expectations at your consult.",
+        a: "The starting shade, stain type, and enamel condition affect the maximum brightness. We will set realistic expectations at your consult.",
       },
       {
         q: "Does whitening damage enamel?",
-        a: "Not when done correctly. Professional gels and proper application are safe for enamel. The over-the-counter scare stories usually involve misuse or poor-fitting trays.",
+        a: "Whitening is generally considered safe for appropriate patients when products are used as directed. We check for cavities, gum irritation, exposed roots, and sensitivity risk before recommending it.",
       },
       {
         q: "Will it whiten crowns or fillings?",
@@ -952,7 +952,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "Multiple levels of sedation, from mild relaxation to deeper rest — so you can get the care you have been postponing.",
     },
     overview: [
-      "Dental anxiety is real and far more common than people admit. Sedation dentistry is a safe, comfortable way to receive treatment in a relaxed state — without years of avoiding visits and watching small problems grow.",
+      "Dental anxiety is real and far more common than people admit. With proper screening and monitoring, sedation dentistry can help many patients receive treatment in a more relaxed state instead of postponing care.",
       "We offer multiple levels of sedation: nitrous oxide for light relaxation, oral sedation pills for moderate calm, and arrangements for IV sedation when deeper care is needed. The right choice depends on the procedure, your medical history, and how anxious you feel.",
     ],
     candidacy: {
@@ -975,7 +975,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "2 · Medical review",
-          body: "We review your medical history, current medications, and any concerns to choose safely.",
+          body: "We review your medical history, current medications, and any concerns before recommending a sedation level.",
         },
         {
           title: "3 · Choose the level",
@@ -987,7 +987,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "5 · Safe recovery",
-          body: "Light sedation lets you drive yourself home; oral or IV sedation requires a ride and a quiet afternoon.",
+          body: "Nitrous by itself usually wears off quickly; oral or IV sedation requires a responsible adult to drive you and a quiet afternoon.",
         },
       ],
     },
@@ -998,13 +998,13 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "Longer procedures finish in fewer visits",
         "Memory of the procedure is often hazy or absent",
         "Reduces gag reflex during back-of-mouth work",
-        "Highly safe under proper supervision",
+        "Designed around screening, monitoring, and the lightest effective level",
         "Multiple levels so you only get as much as you need",
       ],
     },
     aftercare: {
       title: "What to expect afterward",
-      body: "Nitrous wears off within five minutes — you drive yourself home. Oral sedation requires someone to drive you and a quiet rest of the day. Avoid making important decisions, driving, or signing contracts for 24 hours after oral sedation.",
+      body: "Nitrous usually wears off quickly, and we will confirm whether you can drive yourself. Oral sedation requires someone to drive you and a quiet rest of the day. Avoid making important decisions, driving, or signing contracts for 24 hours after oral sedation.",
     },
     faqs: [
       {
@@ -1013,11 +1013,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Is sedation dentistry safe?",
-        a: "Yes, with proper screening and monitoring. We review your medical history carefully and adjust the level accordingly.",
+        a: "Sedation can be safe for many patients with proper screening, dosing, and monitoring. We review your medical history carefully and choose the lightest appropriate level.",
       },
       {
         q: "Will I need someone to drive me?",
-        a: "Not for nitrous. Oral sedation requires a driver and a quiet day. We will tell you exactly what to plan.",
+        a: "Not usually for nitrous by itself once you feel fully recovered. Oral sedation requires a driver and a quiet day. We will tell you exactly what to plan.",
       },
       {
         q: "Will insurance cover sedation?",
@@ -1033,11 +1033,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       eyebrow: "Specialty",
       title: "Sleep apnea & snoring solutions.",
       subtitle:
-        "A custom oral appliance — a CPAP-free path for many patients with mild to moderate sleep apnea.",
+        "A custom oral appliance that may help some patients with physician-diagnosed mild to moderate sleep apnea or CPAP intolerance.",
     },
     overview: [
       "Snoring is more than annoying — for many patients it is a sign of obstructive sleep apnea, where the airway briefly collapses during sleep and breathing pauses repeatedly. Untreated, sleep apnea is linked to high blood pressure, heart disease, fatigue, and accidents.",
-      "For patients with mild to moderate sleep apnea — or those who simply cannot tolerate a CPAP mask — a custom-fitted oral appliance can be a comfortable, effective alternative. It gently positions the lower jaw forward to keep the airway open through the night.",
+      "For some patients with mild to moderate sleep apnea — or patients who cannot tolerate a CPAP mask — a custom-fitted oral appliance can be an effective alternative when recommended as part of a physician-guided plan. It gently positions the lower jaw forward to help keep the airway open through the night.",
     ],
     candidacy: {
       title: "An oral appliance may help if you",
@@ -1081,9 +1081,9 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         "No mask, no hose, no machine",
         "Quiet — no motor sound",
         "Easy to travel with — fits in a small case",
-        "Most patients adapt within a week of wear",
-        "Effective for mild to moderate sleep apnea and primary snoring",
-        "Often covered by medical insurance with a diagnosis",
+        "Many patients adapt after a short break-in period",
+        "May be effective for mild to moderate sleep apnea and primary snoring when properly prescribed",
+        "May be covered by medical insurance with a qualifying diagnosis",
       ],
     },
     aftercare: {
@@ -1097,11 +1097,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
       {
         q: "Will my medical insurance cover it?",
-        a: "Often yes — with a documented sleep apnea diagnosis, many medical insurance plans cover the appliance. We can help with the paperwork.",
+        a: "Coverage varies. With a documented sleep apnea diagnosis, some medical insurance plans cover oral appliance therapy. We can help with the paperwork.",
       },
       {
-        q: "Is it as effective as CPAP?",
-        a: "For mild to moderate cases, often yes. For severe cases, CPAP remains the gold standard — but a CPAP-tolerant patient can sometimes use both.",
+        q: "How does it compare to CPAP?",
+        a: "CPAP is commonly considered first-line therapy, especially for more severe sleep apnea. Oral appliances can be effective for some mild to moderate cases or for patients who cannot tolerate CPAP, but the best option should be guided by your sleep physician.",
       },
       {
         q: "Will it change my bite?",
@@ -1115,7 +1115,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     slug: "implants",
     hero: {
       eyebrow: "Restorative · 3D Planned",
-      title: "Dental implants — permanent, natural, planned in 3D.",
+      title: "Dental implants — long-term, natural-looking, planned in 3D.",
       subtitle:
         "A complete tooth replacement that looks, feels, and functions like the tooth you lost. Implant consultations are available.",
     },
@@ -1126,7 +1126,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     candidacy: {
       title: "Implants are a great option if you",
       items: [
-        "Have one or more missing teeth and want a permanent solution",
+        "Have one or more missing teeth and want a long-term replacement option",
         "Want a replacement that does not rely on adjacent teeth",
         "Are tired of a bridge or denture that does not feel quite right",
         "Have generally good health and enough bone (we will check)",
@@ -1159,14 +1159,14 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         },
         {
           title: "6 · You bite into apples again",
-          body: "Most patients are eating comfortably within days of the final crown.",
+          body: "Many patients return to comfortable chewing after the final crown, once the bite has been adjusted and the area feels settled.",
         },
       ],
     },
     benefits: {
       title: "Why implants are worth it",
       items: [
-        "Permanent — designed to last decades with basic care",
+        "Designed as a long-term replacement with proper care and monitoring",
         "Looks and feels like your natural tooth",
         "Does not require shaping the adjacent teeth (unlike a bridge)",
         "Preserves the jawbone where the tooth was lost",
@@ -1181,11 +1181,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqs: [
       {
         q: "How long do implants last?",
-        a: "With good care, dental implants commonly last 20 to 30 years or more — many last a lifetime. The crown on top may eventually need replacement (typically 10 to 15 years).",
+        a: "Implants can last many years with good home care, healthy gums and bone, and regular dental visits. The crown on top may eventually need repair or replacement.",
       },
       {
         q: "Does it hurt?",
-        a: "Implant placement is more comfortable than most patients expect — typically less painful than an extraction. Sedation options are available.",
+        a: "Implant placement is done with local anesthesia, and many patients report less discomfort than they expected. Soreness varies by case, and sedation options are available when appropriate.",
       },
       {
         q: "Will my insurance cover implants?",

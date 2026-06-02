@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { site, team } from "@/lib/site";
-import { TeamCarousel } from "@/components/TeamCarousel";
 
 export const metadata: Metadata = {
   title: "About Premier Dentistry",
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const doctor = team[0];
+  const featuredTeam = team.filter((member) => member.name !== site.doctor.name);
 
   return (
     <>
@@ -207,24 +208,52 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Full team carousel */}
+      {/* Full team */}
       <Section bg="surface-2">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-20">
-          <div>
-            <Eyebrow>Meet the team</Eyebrow>
-            <Heading className="mt-3">
-              The people you will{" "}
-              <span className="text-brand italic">see every visit.</span>
-            </Heading>
-          </div>
-          <p className="text-ink-2 max-w-md">
-            Behind every comfortable appointment is a team that has been doing
-            this together for years — and genuinely likes each other.
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>Meet the team</Eyebrow>
+          <Heading className="mt-3">
+            Familiar faces,{" "}
+            <span className="text-brand italic">comfortable care.</span>
+          </Heading>
+          <p className="mt-5 text-ink-2">
+            From scheduling to hygiene to chairside support, these are the
+            people who help each visit feel organized, personal, and calm.
           </p>
         </div>
-        <TeamCarousel />
-      </Section>
 
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {featuredTeam.map((member) => (
+            <article
+              key={member.name}
+              className="h-full overflow-hidden rounded-2xl border border-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
+            >
+              <div className="relative aspect-[4/3] bg-surface">
+                {member.image && (
+                  <Image
+                    src={member.image}
+                    alt={`${member.name}, ${member.role} at Premier Dentistry`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover object-[center_18%]"
+                  />
+                )}
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="font-display text-2xl leading-tight text-brand">
+                  {member.name}
+                </h3>
+                <p className="mt-2 text-sm font-bold text-muted">
+                  {member.role}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-ink-2">
+                  {member.bio}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
       <CallToAction />
       <div className="h-20" />
     </>

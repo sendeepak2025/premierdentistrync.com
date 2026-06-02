@@ -16,7 +16,7 @@ export const educationTopics: Record<string, EducationTopic> = {
     title: "Oral Hygiene",
     eyebrow: "Daily care",
     blurb:
-      "What you do at home matters more than anything we do in the office. Here is the routine that actually keeps teeth and gums healthy for life.",
+      "Daily home care is one of the biggest drivers of long-term tooth and gum health. Here is a practical routine that helps reduce preventable dental problems.",
     icon: "sparkle",
     sections: [
       {
@@ -30,9 +30,9 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "Flossing — the part most people skip",
         body: [
-          "Flossing reaches the 35 percent of each tooth's surface that brushing cannot. It is also the single best way to prevent gum disease and the cavities that form between teeth.",
+          "Flossing cleans areas between teeth that toothbrush bristles cannot reliably reach. It can help reduce plaque buildup, gum inflammation, and cavities that form between teeth.",
           "Use about 18 inches of floss. Wind most around your middle fingers and guide a fresh inch between each pair of teeth with your thumbs and index fingers.",
-          "If traditional floss is fiddly, water flossers and pre-strung picks are real, effective alternatives — the best floss is the one you will actually use every night.",
+          "If traditional floss is difficult, water flossers and pre-strung picks can be useful alternatives. The best option is the one you can use consistently and correctly.",
         ],
       },
       {
@@ -46,7 +46,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "Signs something needs attention",
         body: [
-          "Bleeding gums when you brush or floss are not normal. They are the earliest sign of gum disease and almost always reversible if you act quickly.",
+          "Bleeding gums when you brush or floss can be an early sign of gum inflammation or gum disease. Early gingivitis can often improve with better home care and professional cleaning.",
           "Persistent bad breath, sensitivity to hot or cold that lingers, or a tooth that feels off when you bite — all worth a quick call to the office.",
         ],
       },
@@ -55,7 +55,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       "Two minutes, twice a day, with a soft brush at 45° to the gumline",
       "Floss once daily — every tooth, every night",
       "Replace your toothbrush every three months",
-      "Bleeding gums are a signal, not normal",
+      "Bleeding gums are a signal to improve home care and ask us to check your gums",
       "Six-month cleanings catch what home care misses",
     ],
     related: ["child-dentistry", "periodontal-maintenance"],
@@ -66,21 +66,21 @@ export const educationTopics: Record<string, EducationTopic> = {
     title: "Child Dentistry",
     eyebrow: "Care for kids",
     blurb:
-      "Healthy adult teeth start in childhood. Here is how to set your child up for a lifetime of comfortable, confident smiles.",
+      "Healthy adult teeth start in childhood. Here is how to help your child build comfortable, confident dental habits early.",
     icon: "users",
     sections: [
       {
         title: "When should the first visit happen?",
         body: [
           "The American Academy of Pediatric Dentistry recommends a first dental visit by age one, or within six months of the first tooth appearing. Early visits are short, friendly, and mostly about getting your child comfortable with the office.",
-          "Even if there is nothing to treat, the visit teaches your child that the dentist is a safe, non-scary place — which pays off for the next eighteen years of appointments.",
+          "Even if there is nothing to treat, the visit helps your child get familiar with the dental office in a calm, low-pressure way.",
         ],
       },
       {
         title: "Why baby teeth matter",
         body: [
           "Baby teeth hold space for the adult teeth that follow. Losing them too early — to cavities or trauma — can crowd the permanent teeth and lead to orthodontic problems later.",
-          "Baby teeth also help kids chew properly, speak clearly, and smile with confidence. Treating decay in baby teeth is not optional — it is preventive orthodontics.",
+          "Baby teeth also help kids chew properly, speak clearly, and smile with confidence. Treating decay in baby teeth can help avoid pain, infection, and premature tooth loss.",
         ],
       },
       {
@@ -113,13 +113,13 @@ export const educationTopics: Record<string, EducationTopic> = {
     title: "Periodontal Maintenance",
     eyebrow: "Healthy gums",
     blurb:
-      "Gum disease is the leading cause of adult tooth loss — and almost entirely preventable when caught early. Here is what you need to know.",
+      "Gum disease is a major cause of adult tooth loss, and early treatment can make a meaningful difference. Here is what you need to know.",
     icon: "heartbeat",
     sections: [
       {
         title: "Gingivitis versus periodontitis",
         body: [
-          "Gingivitis is the earliest, mildest form of gum disease: red, slightly swollen gums that bleed when you brush. The good news — it is fully reversible with better home care and a professional cleaning.",
+          "Gingivitis is the earliest, mildest form of gum disease: red, slightly swollen gums that bleed when you brush. The good news is that early gingivitis can often be reversed with better home care and a professional cleaning.",
           "Untreated, gingivitis can progress to periodontitis. At that stage, the bone supporting your teeth begins to break down, the gums pull away to form deeper pockets, and the damage becomes harder to reverse. Most adults over 30 have some form of gum disease.",
         ],
       },
@@ -141,13 +141,13 @@ export const educationTopics: Record<string, EducationTopic> = {
         title: "Risk factors worth knowing",
         body: [
           "Smoking is the single biggest risk factor for gum disease. Diabetes, certain medications, hormonal changes during pregnancy, and a genetic predisposition all matter too.",
-          "If you have any of these, more frequent professional cleanings and a careful home routine are the two best investments you can make in keeping your teeth for life.",
+          "If you have any of these, more frequent professional cleanings and a careful home routine can help protect your teeth and gums over time.",
         ],
       },
     ],
     takeaways: [
-      "Bleeding gums are not normal — they are step one of gum disease",
-      "Gingivitis is reversible; periodontitis is not, fully",
+      "Bleeding gums can be an early sign of gum inflammation",
+      "Gingivitis can often improve; periodontitis requires ongoing management",
       "Three- to four-month cleanings if you have a periodontal history",
       "Scaling and root planing is non-surgical and well-tolerated",
       "Smoking is the biggest controllable risk factor",
@@ -160,20 +160,20 @@ export const educationTopics: Record<string, EducationTopic> = {
     title: "Arestin",
     eyebrow: "Targeted antibiotic therapy",
     blurb:
-      "A localized antibiotic placed directly into deep gum pockets, often used alongside scaling and root planing to give gums their best chance to heal.",
+      "A localized antibiotic placed directly into deep gum pockets, sometimes used alongside scaling and root planing when clinically appropriate.",
     icon: "shield",
     sections: [
       {
         title: "What Arestin is",
         body: [
           "Arestin is a small dose of minocycline — a common antibiotic — delivered in microsphere form. We place it directly into the gum pocket after scaling and root planing, where it slowly releases over about two weeks.",
-          "Because the antibiotic is local rather than systemic, it goes exactly where it is needed — into the pocket where harmful bacteria live — without affecting the rest of your body.",
+          "Because the antibiotic is placed locally rather than taken by mouth, it concentrates medication in the treated pocket while limiting whole-body exposure.",
         ],
       },
       {
         title: "When we use it",
         body: [
-          "Arestin is typically recommended for pockets that measure 5 millimeters or deeper after scaling and root planing. These deeper pockets are harder for instruments to reach completely, so adding a localized antibiotic gives the gums a better chance to heal and reattach.",
+          "Arestin may be recommended for pockets that measure 5 millimeters or deeper after scaling and root planing. These deeper pockets are harder for instruments to reach completely, so a localized antibiotic may support healing in selected cases.",
           "It is also useful in patients who have not responded as well as expected to scaling alone, or who are at higher risk for periodontal progression.",
         ],
       },
@@ -187,15 +187,15 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "How well does it work?",
         body: [
-          "Clinical studies show Arestin paired with scaling and root planing reduces pocket depth meaningfully more than scaling alone — and the results are still measurable months later.",
-          "It is not a replacement for good home care or regular maintenance visits. But for patients with deeper pockets, it is a powerful adjunct that can mean the difference between gum disease that improves and gum disease that lingers.",
+          "Clinical studies have shown that Arestin paired with scaling and root planing can reduce pocket depth more than scaling alone for some patients.",
+          "It is not a replacement for good home care or regular maintenance visits. For selected deeper pockets, it can be a useful adjunct as part of periodontal therapy.",
         ],
       },
     ],
     takeaways: [
       "Localized antibiotic — works where it is placed, not body-wide",
       "Used after scaling and root planing for deep pockets (5mm+)",
-      "Painless to place, no allergy issues for most patients",
+      "Quick to place for most patients",
       "Avoid touching the area for a week",
       "Best results come from pairing it with strong home care",
     ],
@@ -213,7 +213,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "General dentist (that is us)",
         body: [
-          "Your general dentist is your dental home — the person you see for cleanings, fillings, crowns, and most routine care. We can handle the majority of what comes up over a lifetime.",
+          "Your general dentist is your dental home — the person you see for cleanings, fillings, crowns, and most routine care. We can handle many common dental needs and coordinate specialty care when needed.",
           "When a case calls for advanced specialty training, we coordinate the referral and stay involved so the care feels seamless.",
         ],
       },
@@ -233,13 +233,13 @@ export const educationTopics: Record<string, EducationTopic> = {
       {
         title: "When a referral makes sense",
         body: [
-          "Most patients never need to see anyone but their general dentist. When we do refer, it is because a specialist can deliver a better outcome — for example, an endodontist for a tooth with curved or calcified roots, or an oral surgeon for impacted wisdom teeth.",
+          "Many patients receive most of their care from a general dentist. When we do refer, it is because a specialist may be better suited for the complexity of the case — for example, an endodontist for a tooth with curved or calcified roots, or an oral surgeon for impacted wisdom teeth.",
           "We stay involved before, during, and after specialty care so nothing falls through the cracks.",
         ],
       },
     ],
     takeaways: [
-      "Your general dentist handles most of what you will ever need",
+      "Your general dentist handles many common dental needs",
       "Specialties exist for complex or advanced cases",
       "Referrals are a sign of careful planning, not anything alarming",
       "We coordinate referrals end to end",
@@ -296,7 +296,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       },
       {
         term: "Composite",
-        def: "Tooth-colored filling material that bonds directly to the tooth. Replaces older silver amalgam.",
+        def: "Tooth-colored filling material that bonds directly to the tooth. Often used instead of silver amalgam for new fillings.",
       },
       {
         term: "Crown",
@@ -364,7 +364,7 @@ export const educationTopics: Record<string, EducationTopic> = {
       },
       {
         term: "Sealant",
-        def: "A thin, protective coating painted onto chewing surfaces of molars to prevent decay.",
+        def: "A thin, protective coating painted onto chewing surfaces of molars to help reduce decay risk.",
       },
       {
         term: "Tartar (calculus)",

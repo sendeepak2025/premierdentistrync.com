@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
@@ -7,10 +8,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { RatingChip } from "@/components/RatingChip";
 import { Reveal } from "@/components/Reveal";
-import { CategoryTeaser } from "@/components/CategoryTeaser";
-import { ServiceListRows } from "@/components/ServiceListRows";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
-import { TeamCarousel } from "@/components/TeamCarousel";
 import { services, site } from "@/lib/site";
 import { absoluteUrl, jsonLd } from "@/lib/seo";
 
@@ -85,7 +83,6 @@ export default function HomePage() {
       },
     ],
   };
-
   return (
     <>
       <script
@@ -96,7 +93,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#cfd2d5] text-ink">
         <Image
-          src="/hero-doctor-wide-sharp.webp"
+          src="/hero-doctor-gemini.webp"
           alt="Premier Dentistry doctor in modern scrubs"
           fill
           priority
@@ -252,6 +249,87 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
+      {/* SAME DAY CROWNS + IMPLANTS */}
+      <Section bg="surface" className="overflow-hidden">
+        <div className="grid gap-16 lg:gap-24">
+          <Reveal>
+            <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+              <div>
+                <h2 className="font-display text-3xl leading-tight text-brand sm:text-4xl">
+                  Same Day Dental Crowns
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-ink-2">
+                  Thankfully, innovation in dentistry has made tooth restoration
+                  easier, more convenient, more accurate and overall less
+                  worrisome for patients. Our office has recently installed
+                  CEREC equipment, which provides for on-site creations of
+                  natural-looking ceramic fillings &amp; dental crowns - in a
+                  single visit. We use a digital camera to take an optical
+                  impression of the damaged tooth, design the appropriate
+                  restoration using CAD software and mill tooth-colored ceramic
+                  on-site. There&apos;s no need for a temporary and return visit.
+                  From tooth preparation to placement and bonding, a patient can
+                  have his or her smile restored in a couple hours.
+                </p>
+                <Button href="/services/dental-crowns" variant="secondary" className="mt-7">
+                  Learn about same-day crowns
+                  <Icon name="arrow-right" className="h-4 w-4" />
+                </Button>
+              </div>
+
+              <div className="relative mx-auto aspect-[4/3] w-full max-w-[500px] overflow-hidden rounded-2xl bg-white shadow-soft ring-1 ring-line">
+                <Image
+                  src="/cerec-crown-technology.jpg"
+                  alt="CEREC same-day dental crown technology"
+                  fill
+                  sizes="(min-width: 1024px) 500px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+              <div className="relative min-h-[320px] overflow-hidden rounded-2xl bg-white shadow-soft ring-1 ring-line lg:min-h-[390px]">
+                <Image
+                  src="/dental-implants.jpg"
+                  alt="Dental implant restoration illustration"
+                  fill
+                  sizes="(min-width: 1024px) 500px, 100vw"
+                  className="object-cover object-[72%_center]"
+                />
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl leading-tight text-brand sm:text-4xl">
+                  Dental Implants
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-ink-2">
+                  We take pride in our state-of-the-art technology at Premier
+                  Dentistry. Besides skills and experience,{" "}
+                  <Link href="/about" className="font-semibold text-brand hover:text-brand-2">
+                    Dr. Patel
+                  </Link>{" "}
+                  works with our top dental specialists who use digital 3D
+                  x-rays, digital impressions, and 3D printers to plan their
+                  implant and/or extraction surgeries. We are able to perform
+                  guided surgeries with unparalleled accuracy and bring you
+                  successful and beautiful results. See our{" "}
+                  <Link href="/services/implants" className="font-semibold text-brand hover:text-brand-2">
+                    Dental Implant
+                  </Link>{" "}
+                  page for more information.
+                </p>
+                <Button href="/contact" className="mt-8">
+                  Free Dental Implant Consultations
+                </Button>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </Section>
+
       {/* WHY US */}
       <Section bg="surface">
         <div className="grid lg:grid-cols-12 gap-12">
@@ -311,132 +389,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* FIRST VISIT WALKTHROUGH */}
-      <Section bg="white">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto">
-            <Eyebrow>What to expect</Eyebrow>
-            <Heading className="mt-3">Your first visit, end to end.</Heading>
-            <p className="mt-5 text-ink-2">
-              No surprises, no upsell. Here is what a comprehensive new-patient
-              visit looks like at Premier.
-            </p>
-          </div>
-        </Reveal>
-
-        <ol className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {[
-            {
-              n: "01",
-              t: "Warm welcome",
-              b: "A short intake, a comfortable chair, and answers to whatever questions you brought with you.",
-            },
-            {
-              n: "02",
-              t: "Modern imaging",
-              b: "Low-radiation digital X-rays and an intraoral scan — no putty, no gagging.",
-            },
-            {
-              n: "03",
-              t: "Honest exam",
-              b: `${site.doctor.name} reviews everything on screen with you and explains what he sees.`,
-            },
-            {
-              n: "04",
-              t: "Personal plan",
-              b: "Options ranked by urgency, with clear pricing and insurance estimates up front.",
-            },
-          ].map((step, i) => (
-            <Reveal as="li" key={step.n} delay={60 * i}>
-              <div className="relative bg-white rounded-2xl border border-line p-6 h-full">
-                <div className="font-display text-4xl text-brand/25">{step.n}</div>
-                <h3 className="mt-2 font-display text-xl text-ink">{step.t}</h3>
-                <p className="mt-2 text-sm text-ink-2 leading-relaxed">{step.b}</p>
-              </div>
-            </Reveal>
-          ))}
-        </ol>
-      </Section>
-
-      {/* CATEGORY TEASER STRIP */}
-      <Section bg="surface-2">
-        <Reveal>
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <Eyebrow>Quick paths</Eyebrow>
-            <Heading className="mt-3">
-              Tell us what you need —{" "}
-              <span className="text-brand italic">we&apos;ll take it from here.</span>
-            </Heading>
-          </div>
-        </Reveal>
-        <Reveal delay={80}>
-          <CategoryTeaser />
-        </Reveal>
-      </Section>
-
-      {/* DIRECT SERVICE LIST WITH BOOK BUTTONS */}
-      <Section bg="white">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <Reveal className="lg:col-span-5 lg:sticky lg:top-32">
-            <Eyebrow>Experience</Eyebrow>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl text-ink leading-[1.05]">
-              Experience{" "}
-              <span className="text-brand italic">personalized comfort.</span>
-            </h2>
-            <p className="mt-5 text-ink-2 text-lg leading-relaxed">
-              Whatever brings you in — a routine cleaning, a new smile, or a
-              tooth that&apos;s been bothering you — book directly below and
-              we&apos;ll take care of the rest.
-            </p>
-            <p className="mt-2 text-sm text-muted italic">
-              (And see why our patients love coming back.)
-            </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <Button href="/contact">
-                <Icon name="calendar" className="h-4 w-4" /> Book a visit
-              </Button>
-              <a
-                href={site.phoneHref}
-                className="inline-flex items-center gap-2 text-sm font-medium text-ink-2 hover:text-brand transition-colors"
-              >
-                <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white border border-line shadow-soft text-brand">
-                  <Icon name="phone" className="h-4 w-4" />
-                </span>
-                {site.phone}
-              </a>
-            </div>
-          </Reveal>
-
-          <Reveal className="lg:col-span-7" delay={100}>
-            <ServiceListRows />
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* TEAM CAROUSEL */}
-      <Section bg="surface">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-20">
-          <Reveal>
-            <Eyebrow>Our team is everything</Eyebrow>
-            <Heading className="mt-3 max-w-2xl">
-              The people you will{" "}
-              <span className="text-brand italic">see every visit.</span>
-            </Heading>
-          </Reveal>
-          <Reveal delay={80}>
-            <Button href="/about#team" variant="secondary">
-              Meet the full team
-              <Icon name="arrow-right" className="h-4 w-4" />
-            </Button>
-          </Reveal>
-        </div>
-        <Reveal delay={120}>
-          <TeamCarousel />
-        </Reveal>
-      </Section>
-
       {/* REVIEWS CAROUSEL */}
-      <Section bg="white">
+      <Section id="reviews" bg="white">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto mb-14">
             <Eyebrow>What patients notice</Eyebrow>

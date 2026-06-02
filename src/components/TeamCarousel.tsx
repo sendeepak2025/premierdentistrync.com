@@ -78,18 +78,18 @@ export function TeamCarousel() {
             className="snap-start shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] bg-white rounded-2xl overflow-hidden border border-line shadow-soft hover:shadow-card transition-all"
           >
             <div className={`relative aspect-[5/4] bg-gradient-to-br ${m.accent}`}>
-              {m.name === "Dr. Anand Patel" && (
+              {m.image && (
                 <Image
-                  src="/dr-patel.jpg"
+                  src={m.image}
                   alt={m.name}
                   fill
                   sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 78vw"
-                  className="object-cover object-[center_22%]"
+                  className="object-cover object-[center_18%]"
                 />
               )}
               <div
                 className={`absolute inset-0 ${
-                  m.name === "Dr. Anand Patel"
+                  m.image
                     ? "bg-gradient-to-t from-ink/60 via-ink/10 to-transparent"
                     : ""
                 }`}
@@ -98,7 +98,7 @@ export function TeamCarousel() {
               <div className="absolute -bottom-16 -left-12 w-48 h-48 rounded-full bg-accent/30 blur-3xl mix-blend-overlay" />
               <div
                 className={`absolute inset-0 flex items-center justify-center ${
-                  m.name === "Dr. Anand Patel" ? "hidden" : ""
+                  m.image ? "hidden" : ""
                 }`}
               >
                 <div className="relative">
@@ -113,7 +113,7 @@ export function TeamCarousel() {
                 href="/contact"
                 className="absolute left-4 right-4 bottom-4 inline-flex items-center justify-center rounded-full bg-white text-brand text-sm font-semibold py-2.5 shadow-soft hover:shadow-card transition-all hover:-translate-y-0.5"
               >
-                Book with {m.name.split(" ")[0]}
+                Book a visit
               </Link>
             </div>
             <div className="p-5">
