@@ -99,13 +99,13 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[76%_top] sm:object-[82%_center] lg:object-center"
+          className="z-0 object-cover object-[64%_top] sm:object-[82%_center] lg:object-center"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(241,243,246,0.98)_0%,rgba(235,238,242,0.94)_58%,rgba(207,210,213,0.22)_78%,rgba(207,210,213,0)_100%)] sm:bg-[radial-gradient(circle_at_18%_26%,rgba(255,255,255,0.42),transparent_32%),linear-gradient(90deg,rgba(232,235,238,0.96)_0%,rgba(224,228,233,0.88)_38%,rgba(207,210,213,0.16)_62%,rgba(207,210,213,0)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(241,243,246,0.98)_0%,rgba(238,241,245,0.93)_54%,rgba(232,235,240,0.55)_74%,rgba(207,210,213,0.12)_100%)] sm:bg-[radial-gradient(circle_at_18%_26%,rgba(255,255,255,0.42),transparent_32%),linear-gradient(90deg,rgba(232,235,238,0.96)_0%,rgba(224,228,233,0.88)_38%,rgba(207,210,213,0.16)_62%,rgba(207,210,213,0)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 z-0 h-24 bg-gradient-to-t from-[#cfd2d5] to-transparent" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-7 sm:min-h-[640px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
-          <Reveal className="flex max-w-[680px] flex-col justify-center sm:min-h-[560px] lg:min-h-[600px]" y={24}>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:min-h-[640px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
+          <Reveal className="flex max-w-[680px] flex-col justify-center sm:min-h-[560px] lg:min-h-[600px]" y={16}>
             <div className="hidden max-w-[320px] flex-wrap items-center gap-2 sm:flex sm:max-w-none sm:gap-3">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-semibold text-ink shadow-soft sm:px-4 sm:text-sm">
@@ -114,17 +114,17 @@ export default function HomePage() {
               </span>
             </div>
 
-            <p className="mt-4 text-xs font-extrabold uppercase tracking-[0.22em] text-brand sm:mt-10 sm:text-sm">
+            <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.22em] text-brand sm:mt-10 sm:text-sm">
               Premier Dentistry of Charlotte
             </p>
-            <h1 className="mt-3 max-w-[330px] font-display text-[3rem] leading-[0.88] text-[#17233b] drop-shadow-[0_2px_0_rgba(255,255,255,0.55)] min-[390px]:text-[3.25rem] sm:mt-4 sm:max-w-[620px] sm:text-[6rem] lg:text-[7.4rem]">
+            <h1 className="mt-3 max-w-[305px] font-display text-[2.75rem] leading-[0.88] text-[#17233b] drop-shadow-[0_2px_0_rgba(255,255,255,0.55)] min-[390px]:text-[3rem] sm:mt-4 sm:max-w-[620px] sm:text-[6rem] lg:text-[7.4rem]">
               There&apos;s a reason...
             </h1>
-            <p className="mt-4 max-w-[335px] text-[1.35rem] font-extrabold leading-tight text-[#0d1830] min-[390px]:text-2xl sm:mt-6 sm:max-w-xl sm:text-4xl">
+            <p className="mt-3 max-w-[330px] text-[1.22rem] font-extrabold leading-tight text-[#0d1830] min-[390px]:text-[1.35rem] sm:mt-6 sm:max-w-xl sm:text-4xl">
               Families choose Premier for{" "}
               <span className="whitespace-nowrap text-[#2f5dc4]">5.0-star</span> dental care.
             </p>
-            <p className="mt-3 max-w-[320px] text-[0.95rem] font-medium leading-relaxed text-[#33415f] min-[390px]:max-w-[350px] sm:mt-4 sm:max-w-xl sm:text-lg">
+            <p className="mt-3 max-w-[320px] text-[0.9rem] font-medium leading-6 text-[#33415f] min-[390px]:max-w-[350px] sm:mt-4 sm:max-w-xl sm:text-lg sm:leading-relaxed">
               Modern dentistry with {site.doctor.name}, {site.doctor.credentials},
               clear treatment plans, same-day technology, and a calmer visit
               from the first call.
@@ -155,9 +155,9 @@ export default function HomePage() {
               ].map(([title, body]) => (
                 <div
                   key={title}
-                  className="rounded-xl bg-white/78 p-2 shadow-soft ring-1 ring-white/70 backdrop-blur-sm sm:rounded-2xl sm:p-4"
+                  className="rounded-xl bg-white/82 p-2 shadow-soft ring-1 ring-white/75 backdrop-blur-sm sm:rounded-2xl sm:p-4"
                 >
-                  <div className="font-display text-lg leading-none text-ink sm:text-3xl">
+                  <div className="font-display text-base leading-none text-ink min-[390px]:text-lg sm:text-3xl">
                     {title}
                   </div>
                   <div className="mt-1 text-[9px] font-semibold leading-tight text-muted sm:text-sm">
