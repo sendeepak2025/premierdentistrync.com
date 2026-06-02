@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
@@ -43,9 +44,9 @@ export default function SmileGalleryPage() {
           <Eyebrow>Smile gallery</Eyebrow>
           <Heading className="mt-3">Real patient before-and-after photos.</Heading>
           <p className="mt-4 text-base leading-7 text-ink-2">
-            Compare each case side by side. Treatment recommendations vary by
-            patient, so Dr. Patel will explain what is realistic for your teeth
-            during a consultation.
+            Drag each photo left or right to compare the before and after
+            results. Treatment recommendations vary by patient, so Dr. Patel
+            will explain what is realistic for your teeth during a consultation.
           </p>
         </div>
 
@@ -55,34 +56,16 @@ export default function SmileGalleryPage() {
               key={c.title}
               className="overflow-hidden rounded-2xl border border-line bg-white shadow-soft transition-all hover:shadow-card"
             >
-              <div className="grid grid-cols-2 gap-px bg-line">
-                <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                  <img
-                    src={c.before}
-                    alt={`${c.title} before treatment`}
-                    loading={c.title.endsWith("1") ? "eager" : "lazy"}
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute left-2 top-2 rounded-full bg-ink/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
-                    Before
-                  </div>
-                </div>
-                <div className="relative aspect-[4/3] overflow-hidden bg-surface">
-                  <img
-                    src={c.after}
-                    alt={`${c.title} after treatment`}
-                    loading={c.title.endsWith("1") ? "eager" : "lazy"}
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute left-2 top-2 rounded-full bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
-                    After
-                  </div>
-                </div>
-              </div>
+              <BeforeAfterSlider
+                before={c.before}
+                after={c.after}
+                title={c.title}
+                eager={c.title.endsWith("1")}
+              />
               <div className="p-5">
                 <h3 className="font-display text-xl text-ink">{c.title}</h3>
                 <p className="mt-1 text-sm leading-6 text-muted">
-                  Actual patient before-and-after photos.
+                  Drag the slider to compare the before and after photos.
                 </p>
               </div>
             </article>
