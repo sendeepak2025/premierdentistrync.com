@@ -17,6 +17,23 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const doctor = team[0];
   const featuredTeam = team.filter((member) => member.name !== site.doctor.name);
+  const clinicPhotos = [
+    {
+      src: "/clinic/clinic-1.jpg",
+      title: "Welcome area",
+      note: "A calm first impression with a team ready to help.",
+    },
+    {
+      src: "/clinic/clinic-3.jpg",
+      title: "Treatment room",
+      note: "Modern rooms designed for clear conversations and comfortable care.",
+    },
+    {
+      src: "/clinic/clinic-4.jpg",
+      title: "Clinical technology",
+      note: "Digital tools that help make treatment easier to see and understand.",
+    },
+  ];
 
   return (
     <>
@@ -144,6 +161,59 @@ export default function AboutPage() {
               <p className="mt-2 text-sm text-ink-2 leading-relaxed">{v.b}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Clinic photos */}
+      <Section bg="white">
+        <div className="grid items-end gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <Eyebrow>Inside the practice</Eyebrow>
+            <Heading className="mt-3">
+              A clean, modern space made for calmer visits.
+            </Heading>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="max-w-2xl text-ink-2 leading-relaxed">
+              From the front desk to treatment rooms, the office is designed to
+              feel organized, bright, and easy to move through. You can see more
+              of the space before your visit in our office tour.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {clinicPhotos.map((photo, index) => (
+            <article
+              key={photo.title}
+              className={`overflow-hidden rounded-2xl border border-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card ${
+                index === 1 ? "md:translate-y-6" : ""
+              }`}
+            >
+              <div className="relative aspect-[4/3] bg-surface">
+                <Image
+                  src={photo.src}
+                  alt={`${photo.title} at Premier Dentistry`}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-xl text-ink">{photo.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-2">
+                  {photo.note}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button href="/office-tour" variant="secondary">
+            View the full office tour
+            <Icon name="arrow-right" className="h-4 w-4" />
+          </Button>
         </div>
       </Section>
 
