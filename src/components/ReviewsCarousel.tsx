@@ -8,6 +8,29 @@ import { RatingChip } from "./RatingChip";
 
 const INTERVAL = 7000;
 
+const reviewPhotos = [
+  {
+    src: "/clinic/clinic-1.jpg",
+    alt: "Premier Dentistry welcome lounge",
+    position: "object-center",
+  },
+  {
+    src: "/clinic/clinic-2.jpg",
+    alt: "Premier Dentistry consultation room",
+    position: "object-center",
+  },
+  {
+    src: "/clinic/clinic-4.jpg",
+    alt: "Premier Dentistry digital imaging area",
+    position: "object-center",
+  },
+  {
+    src: "/clinic/clinic-6.jpg",
+    alt: "Premier Dentistry hygiene suite",
+    position: "object-center",
+  },
+];
+
 export function ReviewsCarousel() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -40,13 +63,6 @@ export function ReviewsCarousel() {
 
   const current = testimonials[index];
 
-  const accents = [
-    "from-brand-2 via-brand to-brand-soft",
-    "from-brand via-accent to-brand-2",
-    "from-accent-2 via-brand to-brand-soft",
-    "from-brand-2 via-brand-soft to-accent",
-  ];
-
   return (
     <div
       className="relative"
@@ -58,7 +74,7 @@ export function ReviewsCarousel() {
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
         {/* Photo column */}
         <div className="lg:col-span-5 relative">
-          <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-card">
+          <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-card bg-brand-soft">
             {testimonials.map((t, i) => (
               <div
                 key={t.name}
@@ -67,26 +83,13 @@ export function ReviewsCarousel() {
                   i === index ? "opacity-100" : "opacity-0"
                 }`}
               >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${
-                    accents[i % accents.length]
-                  }`}
+                <img
+                  src={reviewPhotos[i % reviewPhotos.length].src}
+                  alt={reviewPhotos[i % reviewPhotos.length].alt}
+                  className={`h-full w-full object-cover ${reviewPhotos[i % reviewPhotos.length].position}`}
                 />
-                <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/30 blur-3xl" />
-                <div className="absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-accent/30 blur-3xl mix-blend-overlay" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="absolute -inset-3 rounded-full border border-white/15" />
-                    <div className="absolute -inset-6 rounded-full border border-white/10" />
-                    <div className="relative w-32 h-32 rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 flex items-center justify-center text-white font-display text-4xl">
-                      {t.name
-                        .split(" ")
-                        .map((p) => p[0])
-                        .join("")}
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute left-5 top-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 ring-1 ring-white/15">
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-ink/10" />
+                <div className="absolute left-5 top-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white bg-ink/35 backdrop-blur-md rounded-full px-3 py-1.5 ring-1 ring-white/25">
                   <Icon name="google" className="h-3.5 w-3.5" />
                   Patient feedback
                 </div>
