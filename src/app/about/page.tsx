@@ -152,11 +152,14 @@ export default function AboutPage() {
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
             <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-card relative">
-              <div className={`absolute inset-0 bg-gradient-to-br ${doctor.accent}`} />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8 text-center">
-                <div className="w-28 h-28 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center mb-6 ring-4 ring-white/20">
-                  <span className="font-display text-4xl">{doctor.initials}</span>
-                </div>
+              <Image
+                src={doctor.image ?? "/dr-patel.jpg"}
+                alt={`${doctor.name}, ${site.doctor.credentials}`}
+                fill
+                sizes="(min-width: 1024px) 420px, 100vw"
+                className="object-cover object-[center_18%]"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/82 via-ink/35 to-transparent p-8 text-center text-white">
                 <p className="font-display text-2xl">{doctor.name}</p>
                 <p className="text-sm text-white/80 mt-1">
                   {doctor.role}
