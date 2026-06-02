@@ -102,6 +102,8 @@ export function Header() {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
+              <NavLink href="/about" pathname={pathname}>About</NavLink>
+
               {/* Services dropdown */}
               <div
                 className="relative"
@@ -174,8 +176,6 @@ export function Header() {
                   </div>
                 )}
               </div>
-
-              <NavLink href="/about" pathname={pathname}>About</NavLink>
 
               {/* Patient Central dropdown */}
               <div
@@ -273,6 +273,7 @@ export function Header() {
                 )}
               </div>
 
+              <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
               <NavLink href="/contact" pathname={pathname}>Contact</NavLink>
             </nav>
 
@@ -329,6 +330,8 @@ export function Header() {
             </button>
           </div>
           <nav className="flex-1 overflow-y-auto py-2">
+            <MobileLink href="/about" pathname={pathname}>About</MobileLink>
+
             <div className="border-b border-line">
               <button
                 type="button"
@@ -372,8 +375,6 @@ export function Header() {
               )}
             </div>
 
-            <MobileLink href="/about" pathname={pathname}>About</MobileLink>
-
             <div className="border-b border-line">
               <button
                 type="button"
@@ -414,6 +415,7 @@ export function Header() {
               )}
             </div>
 
+            <MobileLink href="/blog" pathname={pathname}>Blog</MobileLink>
             <MobileLink href="/contact" pathname={pathname}>Contact</MobileLink>
           </nav>
           <div className="p-5 border-t border-line space-y-3">
