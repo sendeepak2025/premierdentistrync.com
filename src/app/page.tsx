@@ -97,9 +97,9 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[70%_top] sm:object-center"
+          className="z-0 object-cover object-[48%_top] sm:object-center"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_50%,rgba(238,245,251,0.34)_68%,rgba(238,245,251,0)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.98)_58%,rgba(247,251,255,0.9)_76%,rgba(238,245,251,0.16)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 pt-6 sm:min-h-[600px] sm:px-6 sm:pb-14 sm:pt-8 lg:min-h-[640px] lg:px-8">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[500px] lg:min-h-[545px]" y={16}>
