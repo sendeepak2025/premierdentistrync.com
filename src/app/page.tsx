@@ -91,7 +91,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
       {/* HERO */}
-      <section className="relative isolate min-h-[calc(100svh-6rem)] overflow-hidden bg-[#cfd2d5] text-ink sm:min-h-0">
+      <section className="relative isolate overflow-hidden bg-[#cfd2d5] text-ink">
         <Image
           src="/hero-doctor-wide.png"
           alt="Premier Dentistry doctor in modern scrubs"
@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(241,243,246,0.98)_0%,rgba(238,241,245,0.93)_54%,rgba(232,235,240,0.55)_74%,rgba(207,210,213,0.12)_100%)] sm:bg-[radial-gradient(circle_at_18%_26%,rgba(255,255,255,0.42),transparent_32%),linear-gradient(90deg,rgba(232,235,238,0.96)_0%,rgba(224,228,233,0.88)_38%,rgba(207,210,213,0.16)_62%,rgba(207,210,213,0)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 z-0 h-24 bg-gradient-to-t from-[#cfd2d5] to-transparent" />
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-6rem)] max-w-7xl items-center px-4 py-6 sm:block sm:min-h-[640px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:min-h-[640px] sm:px-6 sm:py-16 lg:min-h-[680px] lg:px-8">
           <Reveal className="flex max-w-[680px] flex-col justify-center sm:min-h-[560px] lg:min-h-[600px]" y={16}>
             <div className="hidden max-w-[320px] flex-wrap items-center gap-2 sm:flex sm:max-w-none sm:gap-3">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
