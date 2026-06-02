@@ -101,7 +101,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_62%,rgba(247,251,255,0.94)_84%,rgba(238,245,251,0.34)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-6 sm:min-h-[570px] sm:px-6 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-8">
+        <div className="relative z-10 w-full px-4 pb-8 pt-6 sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
             <div className="hidden">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
