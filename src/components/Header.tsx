@@ -44,28 +44,43 @@ export function Header() {
 
   return (
     <>
-      <div className="bg-ink text-white/90 text-xs">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-3">
+      <div className="border-b border-line bg-white text-xs text-ink-2">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <a
-            href={site.phoneHref}
-            className="inline-flex items-center gap-1.5 hover:text-white shrink-0"
+            href={site.social.google}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-1.5 hover:text-brand"
           >
-            <Icon name="phone" className="h-3.5 w-3.5" />
-            <span className="font-medium">{site.phone}</span>
+            <Icon name="star" className="h-3.5 w-3.5 text-ink-2" />
+            <span className="font-semibold text-ink">5.0</span>
+            <span className="flex items-center gap-0.5 text-accent">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Icon key={i} name="star" className="h-3 w-3" />
+              ))}
+            </span>
+            <span className="hidden sm:inline">Google Reviews</span>
           </a>
-          <span className="hidden md:inline-flex items-center gap-1.5 text-white/70">
-            <Icon name="map-pin" className="h-3.5 w-3.5" />
-            {site.address.neighborhood}, {site.address.city}
+          <span className="hidden md:inline-flex items-center gap-1.5">
+            <Icon name="map-pin" className="h-3.5 w-3.5 text-ink-2" />
+            {site.address.neighborhood}, {site.address.city} NC
           </span>
-          <div className="hidden md:inline-flex items-center gap-1.5 text-white/70">
-            <Icon name="clock" className="h-3.5 w-3.5" />
+          <div className="hidden md:inline-flex items-center gap-1.5">
+            <Icon name="clock" className="h-3.5 w-3.5 text-ink-2" />
             Mon – Thu 9–5 · Fri 8–1 (1st, 2nd & 3rd)
           </div>
-          <div className="md:hidden inline-flex items-center gap-1 text-white/70 truncate">
-            <Icon name="map-pin" className="h-3.5 w-3.5 shrink-0" />
+          <div className="md:hidden inline-flex items-center gap-1 truncate">
+            <Icon name="map-pin" className="h-3.5 w-3.5 shrink-0 text-ink-2" />
             <span className="truncate">{site.address.neighborhood}</span>
           </div>
-          <div className="hidden sm:flex items-center gap-1.5">
+          <a
+            href={site.phoneHref}
+            className="hidden shrink-0 items-center gap-1.5 font-medium text-ink hover:text-brand sm:inline-flex"
+          >
+            <Icon name="phone" className="h-3.5 w-3.5" />
+            {site.phone}
+          </a>
+          <div className="hidden">
             <a
               href={site.social.facebook}
               target="_blank"
@@ -102,7 +117,7 @@ export function Header() {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
-              <NavLink href="/about" pathname={pathname}>About</NavLink>
+              <NavLink href="/about" pathname={pathname}>About Us</NavLink>
 
               {/* Services dropdown */}
               <div
@@ -270,7 +285,7 @@ export function Header() {
                 )}
               </div>
 
-              <NavLink href="/smile-gallery" pathname={pathname}>Smile Gallery</NavLink>
+              <NavLink href="/#reviews" pathname={pathname}>Reviews</NavLink>
               <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
               <NavLink href="/contact" pathname={pathname}>Contact</NavLink>
             </nav>
@@ -283,8 +298,8 @@ export function Header() {
               >
                 <Icon name="phone" className="h-4 w-4" />
               </a>
-              <Button href="/contact" size="sm" className="whitespace-nowrap">
-                <Icon name="calendar" className="h-4 w-4" /> Book a Visit
+              <Button href="/contact" size="lg" className="whitespace-nowrap rounded-md px-7">
+                Schedule Appointment
               </Button>
             </div>
 
@@ -328,7 +343,7 @@ export function Header() {
             </button>
           </div>
           <nav className="flex-1 overflow-y-auto py-2">
-            <MobileLink href="/about" pathname={pathname}>About</MobileLink>
+            <MobileLink href="/about" pathname={pathname}>About Us</MobileLink>
 
             <div className="border-b border-line">
               <button
@@ -413,6 +428,7 @@ export function Header() {
             </div>
 
             <MobileLink href="/smile-gallery" pathname={pathname}>Smile Gallery</MobileLink>
+            <MobileLink href="/#reviews" pathname={pathname}>Reviews</MobileLink>
             <MobileLink href="/blog" pathname={pathname}>Blog</MobileLink>
             <MobileLink href="/contact" pathname={pathname}>Contact</MobileLink>
           </nav>
