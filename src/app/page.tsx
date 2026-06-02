@@ -114,7 +114,7 @@ export default function HomePage() {
             <p className="text-[11px] font-extrabold uppercase tracking-[0.3em] text-brand sm:text-sm">
               Premier Dentistry of Charlotte
             </p>
-            <h1 className="mt-7 max-w-[660px] font-display text-[3rem] leading-[0.95] text-[#071733] min-[390px]:text-[3.25rem] sm:text-[4.9rem] lg:text-[5.9rem]">
+            <h1 className="mt-7 max-w-[600px] font-display text-[2.4rem] leading-[0.98] text-[#071733] min-[390px]:text-[2.6rem] sm:text-[3.9rem] lg:text-[4.7rem]">
               Modern Family Dentistry in Charlotte
             </h1>
             <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#33415f] sm:text-xl">
