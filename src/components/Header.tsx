@@ -247,9 +247,6 @@ export function Header() {
                             <PatientLink href="/patient-info#technology">
                               Advanced Technology
                             </PatientLink>
-                            <PatientLink href="/smile-gallery">
-                              Smile Gallery
-                            </PatientLink>
                             <PatientLink href="/office-tour">
                               Office Tour
                             </PatientLink>
@@ -273,6 +270,7 @@ export function Header() {
                 )}
               </div>
 
+              <NavLink href="/smile-gallery" pathname={pathname}>Smile Gallery</NavLink>
               <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
               <NavLink href="/contact" pathname={pathname}>Contact</NavLink>
             </nav>
@@ -409,12 +407,12 @@ export function Header() {
                   <Link href="/patient-info#premiercare" className="block px-8 py-2 text-sm text-ink-2 hover:text-brand">PremierCare Savings Plan</Link>
                   <Link href="/patient-info#financial-policy" className="block px-8 py-2 text-sm text-ink-2 hover:text-brand">Financial Policy</Link>
                   <Link href="/patient-info#technology" className="block px-8 py-2 text-sm text-ink-2 hover:text-brand">Advanced Technology</Link>
-                  <Link href="/smile-gallery" className="block px-8 py-2 text-sm text-ink-2 hover:text-brand">Smile Gallery</Link>
                   <Link href="/office-tour" className="block px-8 py-2 text-sm text-ink-2 hover:text-brand">Office Tour</Link>
                 </div>
               )}
             </div>
 
+            <MobileLink href="/smile-gallery" pathname={pathname}>Smile Gallery</MobileLink>
             <MobileLink href="/blog" pathname={pathname}>Blog</MobileLink>
             <MobileLink href="/contact" pathname={pathname}>Contact</MobileLink>
           </nav>
