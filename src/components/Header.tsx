@@ -285,7 +285,7 @@ export function Header() {
                 )}
               </div>
 
-              <NavLink href="/#reviews" pathname={pathname}>Reviews</NavLink>
+              <NavLink href="/smile-gallery" pathname={pathname}>Smile Gallery</NavLink>
               <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
               <NavLink href="/contact" pathname={pathname}>Contact</NavLink>
             </nav>
@@ -428,7 +428,6 @@ export function Header() {
             </div>
 
             <MobileLink href="/smile-gallery" pathname={pathname}>Smile Gallery</MobileLink>
-            <MobileLink href="/#reviews" pathname={pathname}>Reviews</MobileLink>
             <MobileLink href="/blog" pathname={pathname}>Blog</MobileLink>
             <MobileLink href="/contact" pathname={pathname}>Contact</MobileLink>
           </nav>
