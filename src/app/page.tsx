@@ -247,53 +247,53 @@ export default function HomePage() {
       </section>
 
       {/* WHY FAMILIES CHOOSE US */}
-      <section className="bg-[#edf5ff] py-12 sm:py-16">
+      <section className="bg-[#edf5ff] py-10 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="mx-auto max-w-4xl text-center">
               <p className="text-xs font-extrabold uppercase tracking-[0.32em] text-brand">
                 Why families choose us
               </p>
-              <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl">
+              <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-[2.15rem]">
                 Exceptional Care. Honest. Comfortable. Convenient.
               </h2>
             </div>
           </Reveal>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: "users" as const,
                 title: "Same-Day Technology",
-                body: "Advanced technology that saves you time and gets you smiling sooner.",
+                body: "CEREC crowns and digital tools help save time and simplify treatment.",
               },
               {
                 icon: "smile" as const,
                 title: "Comfortable Visits",
-                body: "A calm, friendly environment designed to make every visit relaxed.",
+                body: "A calm, friendly office designed to make every visit feel easier.",
               },
               {
                 icon: "calendar" as const,
                 title: "Transparent Treatment Plans",
-                body: "Clear explanations and honest recommendations so you can decide with confidence.",
+                body: "Clear explanations and honest recommendations before treatment starts.",
               },
               {
                 icon: "star" as const,
                 title: "5-Star Patient Experience",
-                body: "Local families trust us for personalized, high-quality dental care.",
+                body: "Local families trust us for personal, high-quality dental care.",
               },
             ].map((feature, i) => (
               <Reveal key={feature.title} delay={80 * (i + 1)}>
-                <div className="h-full rounded-xl border border-line bg-white p-6 shadow-soft">
+                <div className="h-full rounded-lg border border-line bg-white p-5 shadow-soft">
                   <div className="flex gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand text-white">
-                      <Icon name={feature.icon} className="h-7 w-7" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand text-white">
+                      <Icon name={feature.icon} className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold leading-tight text-ink">
+                      <h3 className="text-base font-bold leading-tight text-ink">
                         {feature.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-6 text-ink-2">
+                      <p className="mt-2 text-sm leading-5 text-ink-2">
                         {feature.body}
                       </p>
                     </div>
