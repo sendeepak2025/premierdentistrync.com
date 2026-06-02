@@ -122,16 +122,16 @@ export default function HomePage() {
               technology, and comfortable dental visits.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-[#33415f]">
+            <div className="mt-7 flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold text-[#33415f] lg:flex-nowrap lg:gap-x-4">
               {[
                 "Same-Day Crowns",
                 "Emergency Appointments",
                 "Advanced Technology",
                 "Family-Friendly Care",
               ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2">
-                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white">
-                    <Icon name="check" className="h-3.5 w-3.5" />
+                <span key={item} className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap">
+                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-brand text-white">
+                    <Icon name="check" className="h-3 w-3" />
                   </span>
                   {item}
                 </span>
