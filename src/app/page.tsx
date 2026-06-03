@@ -90,15 +90,25 @@ export default function HomePage() {
       />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#eef5fb] text-ink">
-        <Image
-          src="/hero-doctor-mobile.png"
-          alt="Dr. Anand Patel standing in a modern dental office"
-          fill
-          priority
-          quality={100}
-          sizes="100vw"
-          className="z-0 object-cover object-left-top sm:hidden"
-        />
+        <div className="relative aspect-[925/1701] w-full overflow-hidden sm:hidden">
+          <Image
+            src="/hero-doctor-mobile-complete.png"
+            alt="Premier Dentistry mobile hero with Dr. Anand Patel"
+            fill
+            priority
+            quality={100}
+            sizes="100vw"
+            className="object-cover object-top"
+          />
+          <Button
+            href="/contact"
+            size="lg"
+            className="absolute left-5 top-[53%] z-10 w-[52%] whitespace-nowrap rounded-md px-3 py-3 text-xs shadow-card"
+          >
+            <Icon name="calendar" className="h-3.5 w-3.5" />
+            Schedule Appointment
+          </Button>
+        </div>
         <Image
           src="/hero-doctor-office.png"
           alt="Premier Dentistry doctor in modern scrubs"
@@ -108,9 +118,9 @@ export default function HomePage() {
           sizes="100vw"
           className="z-0 hidden object-cover object-[68%_34%] sm:block"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_42%,rgba(247,251,255,0.72)_58%,rgba(238,245,251,0)_82%),linear-gradient(180deg,rgba(247,251,255,0)_0%,rgba(247,251,255,0.08)_48%,rgba(247,251,255,0.9)_82%,rgba(247,251,255,1)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
+        <div className="absolute inset-0 z-0 hidden sm:block sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
-        <div className="relative z-10 w-full px-4 pb-7 pt-5 sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
+        <div className="relative z-10 hidden w-full px-4 pb-7 pt-5 sm:block sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
             <div className="hidden">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
