@@ -6,7 +6,6 @@ import { Icon } from "@/components/Icon";
 import { Section, Eyebrow, Heading } from "@/components/Section";
 import { CallToAction } from "@/components/CallToAction";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
-import { RatingChip } from "@/components/RatingChip";
 import { Reveal } from "@/components/Reveal";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { services, site } from "@/lib/site";
@@ -56,9 +55,9 @@ export default function HomePage() {
         about: { "@id": absoluteUrl("/#dentist") },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: absoluteUrl("/og-image.png"),
-          width: 1200,
-          height: 630,
+          url: absoluteUrl("/hero-family-all-screens.png"),
+          width: 1536,
+          height: 1024,
         },
         significantLink: [
           absoluteUrl("/services"),
@@ -85,7 +84,6 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
       {/* HERO */}
@@ -106,117 +104,6 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover object-top"
           />
-        </div>
-        <Image
-          src="/hero-doctor-office.png"
-          alt="Premier Dentistry doctor in modern scrubs"
-          fill
-          priority
-          quality={100}
-          sizes="100vw"
-          className="hidden"
-        />
-        <div className="hidden" />
-
-        <div className="hidden">
-          <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
-            <div className="hidden">
-              <RatingChip variant="light" reviewsLabel="local Google reviews" />
-              <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-xs font-semibold text-ink shadow-soft sm:px-4 sm:text-sm">
-                <Icon name="map-pin" className="h-4 w-4 text-brand" />
-                Ballantyne, Charlotte NC
-              </span>
-            </div>
-
-            <p className="max-w-[240px] text-[10px] font-extrabold uppercase tracking-[0.24em] text-brand sm:max-w-none sm:text-sm sm:tracking-[0.3em]">
-              Premier Dentistry of Charlotte
-            </p>
-            <h1 className="mt-6 max-w-[250px] font-display text-[2rem] leading-[1.02] text-[#071733] min-[390px]:max-w-[270px] min-[390px]:text-[2.08rem] sm:mt-7 sm:max-w-[600px] sm:text-[3.9rem] lg:text-[4.7rem]">
-              Modern Family Dentistry in Charlotte
-            </h1>
-            <p className="mt-5 max-w-[275px] text-base font-medium leading-7 text-[#33415f] sm:mt-6 sm:max-w-xl sm:text-xl sm:leading-8">
-              Trusted by local families for same-day care, advanced
-              technology, and comfortable dental visits.
-            </p>
-
-            <div className="mt-6 grid max-w-[285px] grid-cols-2 gap-x-3 gap-y-2 text-[10px] font-semibold text-[#33415f] min-[390px]:text-[11px] sm:mt-7 sm:flex sm:max-w-none sm:flex-wrap sm:gap-x-4 sm:text-xs lg:flex-nowrap lg:gap-x-4">
-              {[
-                "Same-Day Crowns",
-                "Emergency Appointments",
-                "Advanced Technology",
-                "Family-Friendly Care",
-              ].map((item) => (
-                <span key={item} className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap">
-                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-brand text-white">
-                    <Icon name="check" className="h-3 w-3" />
-                  </span>
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-7 flex max-w-[310px] flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row">
-              <Button href="/contact" size="lg" className="rounded-md px-8">
-                <Icon name="calendar" className="h-4 w-4" />
-                Schedule Appointment
-              </Button>
-              <Button
-                href={site.phoneHref}
-                variant="white"
-                size="lg"
-                className="rounded-md border border-brand px-8 text-brand"
-              >
-                <Icon name="phone" className="h-4 w-4" />
-                Call {site.phone}
-              </Button>
-            </div>
-
-            <div className="mt-7 grid max-w-[760px] grid-cols-4 overflow-hidden rounded-xl border border-line bg-white/96 shadow-soft backdrop-blur-sm sm:mt-8">
-              {[
-                ["users", "5000+", "Patients Served"],
-                ["star", "5.0", "Google Rating"],
-                ["shield", "20+", "Years Experience"],
-                ["tooth", "Same-Day", "Treatment Options"],
-              ].map(([icon, title, body], i) => (
-                <div
-                  key={title}
-                  className={`flex min-h-[86px] flex-col items-center justify-center gap-1.5 px-2.5 py-3 text-center sm:min-h-[78px] sm:flex-row sm:gap-3 sm:px-5 sm:py-4 sm:text-left ${
-                    i > 0 ? "border-l border-line" : ""
-                  }`}
-                >
-                  <Icon name={icon as "users" | "star" | "shield" | "tooth"} className="h-5 w-5 shrink-0 text-ink-2 sm:h-6 sm:w-6" />
-                  <div className="min-w-0">
-                    <div className="text-sm font-bold leading-tight text-brand sm:whitespace-nowrap sm:text-xl">
-                      {title}
-                    </div>
-                    <div className="mt-0.5 text-[10px] leading-tight text-ink-2 sm:whitespace-nowrap sm:text-[11px] sm:leading-snug">
-                      {body}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-
-          <div className="hidden">
-            <div className="relative ml-auto aspect-[4/5] w-full max-w-[460px] overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-card">
-              <Image
-                src="/dr-patel-official.webp"
-                alt={`${site.doctor.name}, ${site.doctor.credentials}`}
-                fill
-                sizes="460px"
-                className="object-cover object-[center_22%]"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent p-5">
-                <div className="font-display text-2xl text-white">
-                  {site.doctor.name}
-                </div>
-                <div className="mt-1 text-sm font-medium text-white/75">
-                  {site.doctor.credentials} · Premier Dentistry
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

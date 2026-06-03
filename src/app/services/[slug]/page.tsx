@@ -160,7 +160,6 @@ export default async function ServiceDetailPage({
     <>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
       {/* BLUE BANNER HERO */}

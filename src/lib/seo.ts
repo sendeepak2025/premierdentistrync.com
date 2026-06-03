@@ -17,6 +17,7 @@ export const primarySeoKeywords = [
   "root canal Ballantyne",
   "nitrous oxide dentist Charlotte",
   "dental office near Ballantyne",
+  "dentist near Marvin NC",
 ];
 
 export const localSearchAreas = [
@@ -30,6 +31,7 @@ export const localSearchAreas = [
   "Blakeney",
   "Ardrey Kell",
   "Waverly",
+  "Marvin",
 ];
 
 export function absoluteUrl(path = "/") {

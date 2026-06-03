@@ -23,9 +23,11 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-    setOpenDropdown(null);
-    setOpenMobile(null);
+    queueMicrotask(() => {
+      setOpen(false);
+      setOpenDropdown(null);
+      setOpenMobile(null);
+    });
   }, [pathname]);
 
   useEffect(() => {

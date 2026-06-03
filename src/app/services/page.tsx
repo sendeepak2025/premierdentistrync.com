@@ -103,7 +103,6 @@ export default function ServicesPage() {
     <>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: jsonLd(schema) }}
       />
       {/* Blue banner hero */}
