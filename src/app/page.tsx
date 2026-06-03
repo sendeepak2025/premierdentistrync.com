@@ -97,7 +97,7 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[center_top] sm:hidden"
+          className="z-0 object-cover object-left-top sm:hidden"
         />
         <Image
           src="/hero-doctor-office.png"
@@ -108,7 +108,7 @@ export default function HomePage() {
           sizes="100vw"
           className="z-0 hidden object-cover object-[68%_34%] sm:block"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.98)_46%,rgba(247,251,255,0.58)_64%,rgba(238,245,251,0)_100%),linear-gradient(180deg,rgba(247,251,255,0)_0%,rgba(247,251,255,0.08)_48%,rgba(247,251,255,0.86)_82%,rgba(247,251,255,1)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_42%,rgba(247,251,255,0.72)_58%,rgba(238,245,251,0)_82%),linear-gradient(180deg,rgba(247,251,255,0)_0%,rgba(247,251,255,0.08)_48%,rgba(247,251,255,0.9)_82%,rgba(247,251,255,1)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
         <div className="relative z-10 w-full px-4 pb-7 pt-5 sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
@@ -120,18 +120,18 @@ export default function HomePage() {
               </span>
             </div>
 
-            <p className="max-w-[270px] text-[10px] font-extrabold uppercase tracking-[0.28em] text-brand sm:max-w-none sm:text-sm sm:tracking-[0.3em]">
+            <p className="max-w-[240px] text-[10px] font-extrabold uppercase tracking-[0.24em] text-brand sm:max-w-none sm:text-sm sm:tracking-[0.3em]">
               Premier Dentistry of Charlotte
             </p>
-            <h1 className="mt-6 max-w-[360px] font-display text-[2rem] leading-[1.02] text-[#071733] min-[390px]:text-[2.08rem] sm:mt-7 sm:max-w-[600px] sm:text-[3.9rem] lg:text-[4.7rem]">
+            <h1 className="mt-6 max-w-[250px] font-display text-[2rem] leading-[1.02] text-[#071733] min-[390px]:max-w-[270px] min-[390px]:text-[2.08rem] sm:mt-7 sm:max-w-[600px] sm:text-[3.9rem] lg:text-[4.7rem]">
               Modern Family Dentistry in Charlotte
             </h1>
-            <p className="mt-5 max-w-[315px] text-base font-medium leading-7 text-[#33415f] sm:mt-6 sm:max-w-xl sm:text-xl sm:leading-8">
+            <p className="mt-5 max-w-[275px] text-base font-medium leading-7 text-[#33415f] sm:mt-6 sm:max-w-xl sm:text-xl sm:leading-8">
               Trusted by local families for same-day care, advanced
               technology, and comfortable dental visits.
             </p>
 
-            <div className="mt-6 grid max-w-[320px] grid-cols-2 gap-x-3 gap-y-2 text-[11px] font-semibold text-[#33415f] sm:mt-7 sm:flex sm:max-w-none sm:flex-wrap sm:gap-x-4 sm:text-xs lg:flex-nowrap lg:gap-x-4">
+            <div className="mt-6 grid max-w-[285px] grid-cols-2 gap-x-3 gap-y-2 text-[10px] font-semibold text-[#33415f] min-[390px]:text-[11px] sm:mt-7 sm:flex sm:max-w-none sm:flex-wrap sm:gap-x-4 sm:text-xs lg:flex-nowrap lg:gap-x-4">
               {[
                 "Same-Day Crowns",
                 "Emergency Appointments",
@@ -147,7 +147,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-7 flex max-w-[360px] flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row">
+            <div className="mt-7 flex max-w-[310px] flex-col gap-3 sm:mt-8 sm:max-w-none sm:flex-row">
               <Button href="/contact" size="lg" className="rounded-md px-8">
                 <Icon name="calendar" className="h-4 w-4" />
                 Schedule Appointment
