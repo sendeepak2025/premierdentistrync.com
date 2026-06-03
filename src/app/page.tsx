@@ -92,7 +92,7 @@ export default function HomePage() {
       <section className="relative isolate overflow-hidden bg-[#eef5fb] text-ink">
         <div className="relative aspect-[1086/1448] w-full overflow-hidden sm:hidden">
           <Image
-            src="/hero-doctor-mobile-complete.png"
+            src="/hero-doctor-mobile-v2.png"
             alt="Premier Dentistry mobile hero with Dr. Anand Patel"
             fill
             priority
@@ -100,14 +100,6 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover object-top"
           />
-          <Button
-            href="/contact"
-            size="lg"
-            className="absolute left-5 top-[53%] z-10 w-[52%] whitespace-nowrap rounded-md px-3 py-3 text-xs shadow-card"
-          >
-            <Icon name="calendar" className="h-3.5 w-3.5" />
-            Schedule Appointment
-          </Button>
         </div>
         <Image
           src="/hero-doctor-office.png"
