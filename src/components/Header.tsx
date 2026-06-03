@@ -59,7 +59,7 @@ export function Header() {
                 <Icon key={i} name="star" className="h-3 w-3" />
               ))}
             </span>
-            <span>Google Reviews</span>
+            <span>500+ Google Reviews</span>
           </a>
           <span className="hidden md:inline-flex items-center gap-1.5">
             <Icon name="map-pin" className="h-3.5 w-3.5 text-ink-2" />
@@ -78,7 +78,7 @@ export function Header() {
             className="inline-flex shrink-0 items-center justify-center gap-1.5 font-medium text-ink hover:text-brand"
           >
             <Icon name="phone" className="h-3.5 w-3.5" />
-            {site.phone}
+            (704) 544-8860
           </a>
           <div className="hidden">
             <a
