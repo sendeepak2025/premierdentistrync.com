@@ -90,7 +90,7 @@ export default function HomePage() {
       />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#eef5fb] text-ink">
-        <div className="relative aspect-[925/1701] w-full overflow-hidden sm:hidden">
+        <div className="relative aspect-[1086/1448] w-full overflow-hidden sm:hidden">
           <Image
             src="/hero-doctor-mobile-complete.png"
             alt="Premier Dentistry mobile hero with Dr. Anand Patel"
