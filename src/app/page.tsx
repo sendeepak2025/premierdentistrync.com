@@ -90,10 +90,16 @@ export default function HomePage() {
       />
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-[#eef5fb] text-ink">
-        <div className="relative aspect-[1086/1448] w-full overflow-hidden sm:hidden">
+        <h1 className="sr-only">
+          Modern Family Dentistry in Charlotte
+        </h1>
+        <p className="sr-only">
+          Premier Dentistry of Charlotte provides same-day crowns, emergency appointments, advanced technology, and family-friendly dental care.
+        </p>
+        <div className="relative aspect-[1536/1024] w-full overflow-hidden">
           <Image
-            src="/hero-doctor-mobile-v2.png"
-            alt="Premier Dentistry mobile hero with Dr. Anand Patel"
+            src="/hero-family-all-screens.png"
+            alt="Modern Family Dentistry in Charlotte at Premier Dentistry"
             fill
             priority
             quality={100}
@@ -108,11 +114,11 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 hidden object-cover object-[68%_34%] sm:block"
+          className="hidden"
         />
-        <div className="absolute inset-0 z-0 hidden sm:block sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
+        <div className="hidden" />
 
-        <div className="relative z-10 hidden w-full px-4 pb-7 pt-5 sm:block sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
+        <div className="hidden">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
             <div className="hidden">
               <RatingChip variant="light" reviewsLabel="local Google reviews" />
