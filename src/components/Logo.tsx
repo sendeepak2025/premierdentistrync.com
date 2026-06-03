@@ -13,7 +13,7 @@ export function Logo({
   className = "",
   priority = false,
 }: LogoProps) {
-  const height = variant === "compact" ? 28 : 36;
+  const height = variant === "compact" ? 24 : 36;
   const width = Math.round(height * ASPECT);
 
   return (

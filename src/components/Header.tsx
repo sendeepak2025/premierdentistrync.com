@@ -45,12 +45,12 @@ export function Header() {
   return (
     <>
       <div className="border-b border-line bg-white text-xs text-ink-2">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 items-center gap-x-3 gap-y-2 px-4 py-2 sm:flex sm:justify-between sm:px-6 lg:px-8">
           <a
             href={site.social.google}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-1.5 hover:text-brand"
+            className="col-span-2 inline-flex shrink-0 items-center justify-center gap-1.5 hover:text-brand sm:col-span-1 sm:justify-start"
           >
             <Icon name="star" className="h-3.5 w-3.5 text-ink-2" />
             <span className="font-semibold text-ink">5.0</span>
@@ -59,7 +59,7 @@ export function Header() {
                 <Icon key={i} name="star" className="h-3 w-3" />
               ))}
             </span>
-            <span className="hidden sm:inline">Google Reviews</span>
+            <span>Google Reviews</span>
           </a>
           <span className="hidden md:inline-flex items-center gap-1.5">
             <Icon name="map-pin" className="h-3.5 w-3.5 text-ink-2" />
@@ -69,13 +69,13 @@ export function Header() {
             <Icon name="clock" className="h-3.5 w-3.5 text-ink-2" />
             Mon – Thu 9–5 · Fri 8–1 (1st, 2nd & 3rd)
           </div>
-          <div className="md:hidden inline-flex items-center gap-1 truncate">
+          <div className="inline-flex items-center justify-center gap-1 truncate md:hidden">
             <Icon name="map-pin" className="h-3.5 w-3.5 shrink-0 text-ink-2" />
-            <span className="truncate">{site.address.neighborhood}</span>
+            <span className="truncate">{site.address.neighborhood}, Charlotte NC</span>
           </div>
           <a
             href={site.phoneHref}
-            className="hidden shrink-0 items-center gap-1.5 font-medium text-ink hover:text-brand sm:inline-flex"
+            className="inline-flex shrink-0 items-center justify-center gap-1.5 font-medium text-ink hover:text-brand"
           >
             <Icon name="phone" className="h-3.5 w-3.5" />
             {site.phone}
@@ -110,10 +110,15 @@ export function Header() {
             : "bg-white border-b border-transparent"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="h-16 lg:h-20 flex items-center justify-between gap-6">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+          <div className="h-16 lg:h-20 flex items-center justify-between gap-2 lg:gap-6">
             <Link href="/" className="shrink-0">
-              <Logo priority />
+              <span className="block sm:hidden">
+                <Logo variant="compact" priority />
+              </span>
+              <span className="hidden sm:block">
+                <Logo priority />
+              </span>
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
@@ -303,10 +308,18 @@ export function Header() {
               </Button>
             </div>
 
+            <Button
+              href="/contact"
+              size="sm"
+              className="hidden min-[380px]:inline-flex shrink-0 rounded-md px-2.5 text-xs lg:hidden"
+            >
+              Schedule Appointment
+            </Button>
+
             <button
               type="button"
               aria-label="Open menu"
-              className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full text-ink hover:bg-brand-soft"
+              className="lg:hidden inline-flex items-center justify-center w-9 h-9 shrink-0 rounded-full text-ink hover:bg-brand-soft"
               onClick={() => setOpen(true)}
             >
               <Icon name="menu" />

@@ -97,9 +97,9 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="z-0 object-cover object-[36%_top] sm:object-[68%_34%]"
+          className="z-0 object-cover object-[58%_top] sm:object-[68%_34%]"
         />
-        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,1)_68%,rgba(247,251,255,0.88)_84%,rgba(238,245,251,0.18)_100%),linear-gradient(180deg,rgba(247,251,255,0)_0%,rgba(247,251,255,0.15)_48%,rgba(247,251,255,0.96)_78%,rgba(247,251,255,1)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(247,251,255,1)_0%,rgba(247,251,255,0.99)_54%,rgba(247,251,255,0.72)_72%,rgba(238,245,251,0.08)_100%),linear-gradient(180deg,rgba(247,251,255,0)_0%,rgba(247,251,255,0.08)_48%,rgba(247,251,255,0.9)_82%,rgba(247,251,255,1)_100%)] sm:bg-[linear-gradient(90deg,rgba(247,251,255,0.99)_0%,rgba(247,251,255,0.94)_38%,rgba(238,245,251,0.24)_56%,rgba(238,245,251,0)_100%)]" />
 
         <div className="relative z-10 w-full px-4 pb-7 pt-5 sm:min-h-[570px] sm:px-8 sm:pb-10 sm:pt-7 lg:min-h-[610px] lg:px-12 xl:px-12 2xl:px-16">
           <Reveal className="flex max-w-[670px] flex-col justify-start sm:min-h-[470px] lg:min-h-[515px]" y={16}>
@@ -154,7 +154,7 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-7 grid max-w-[360px] grid-cols-2 overflow-hidden rounded-xl border border-line bg-white/96 shadow-soft backdrop-blur-sm sm:mt-8 sm:max-w-[760px] sm:grid-cols-4">
+            <div className="mt-7 grid max-w-[760px] grid-cols-4 overflow-hidden rounded-xl border border-line bg-white/96 shadow-soft backdrop-blur-sm sm:mt-8">
               {[
                 ["users", "500+", "Patients Served"],
                 ["star", "5.0", "Google Rating"],
@@ -163,18 +163,16 @@ export default function HomePage() {
               ].map(([icon, title, body], i) => (
                 <div
                   key={title}
-                  className={`flex min-h-[72px] items-center gap-2.5 px-4 py-3.5 sm:min-h-[78px] sm:gap-3 sm:px-5 sm:py-4 ${
-                    i > 0 ? "sm:border-l sm:border-line" : ""
-                  } ${
-                    i > 1 ? "border-t border-line sm:border-t-0" : ""
+                  className={`flex min-h-[86px] flex-col items-center justify-center gap-1.5 px-2.5 py-3 text-center sm:min-h-[78px] sm:flex-row sm:gap-3 sm:px-5 sm:py-4 sm:text-left ${
+                    i > 0 ? "border-l border-line" : ""
                   }`}
                 >
-                  <Icon name={icon as "users" | "star" | "shield" | "tooth"} className="h-6 w-6 shrink-0 text-ink-2" />
+                  <Icon name={icon as "users" | "star" | "shield" | "tooth"} className="h-5 w-5 shrink-0 text-ink-2 sm:h-6 sm:w-6" />
                   <div className="min-w-0">
-                    <div className="whitespace-nowrap text-base font-bold leading-tight text-brand sm:text-xl">
+                    <div className="text-sm font-bold leading-tight text-brand sm:whitespace-nowrap sm:text-xl">
                       {title}
                     </div>
-                    <div className="mt-0.5 whitespace-nowrap text-[11px] leading-snug text-ink-2">
+                    <div className="mt-0.5 text-[10px] leading-tight text-ink-2 sm:whitespace-nowrap sm:text-[11px] sm:leading-snug">
                       {body}
                     </div>
                   </div>
