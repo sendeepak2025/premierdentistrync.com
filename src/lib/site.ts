@@ -25,6 +25,7 @@ export const site = {
     "Indian Land, SC",
     "Fort Mill, SC",
     "Waxhaw",
+    "Marvin",
   ],
   hours: [
     { day: "Monday", time: "9:00 AM – 5:00 PM" },
@@ -64,7 +65,7 @@ export const team: TeamMember[] = [
     name: "Dr. Anand Patel",
     role: "Dentist & Owner",
     initials: "AP",
-    bio: "A graduate of NYU College of Dentistry (DDS, 2005) with a Bachelor of Science from Binghamton University, Dr. Patel completed a general practice residency at St. Joseph Hospital in Paterson, New Jersey. He has been practicing since 2011, first in New Jersey and now leading our Charlotte team, with a conservative and compassionate approach focused on patient comfort and lifelong learning.",
+    bio: "A graduate of NYU College of Dentistry (DDS, 2005) with a Bachelor of Science from Binghamton University, Dr. Patel completed a general practice residency at St. Joseph Hospital in Paterson, New Jersey. He has been practicing since 2005, first in New Jersey and now leading our Charlotte team, with a conservative and compassionate approach focused on patient comfort and lifelong learning.",
     accent: "from-brand-2 to-brand",
     image: "/dr-patel.jpg",
   },

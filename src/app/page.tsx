@@ -175,7 +175,7 @@ export default function HomePage() {
 
             <div className="mt-7 grid max-w-[760px] grid-cols-4 overflow-hidden rounded-xl border border-line bg-white/96 shadow-soft backdrop-blur-sm sm:mt-8">
               {[
-                ["users", "500+", "Patients Served"],
+                ["users", "5000+", "Patients Served"],
                 ["star", "5.0", "Google Rating"],
                 ["shield", "20+", "Years Experience"],
                 ["tooth", "Same-Day", "Treatment Options"],

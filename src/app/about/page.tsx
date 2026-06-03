@@ -77,7 +77,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 reveal reveal-delay-2">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { k: "Since 2011", v: "In practice" },
+                  { k: "Since 2005", v: "In practice" },
                   { k: "NYU '05", v: "DDS, Dr. Patel" },
                   { k: "Modern", v: "Digital workflows" },
                   { k: "Family", v: "All ages welcome" },
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 "DDS · NYU College of Dentistry (2005)",
                 "BS · Binghamton University",
                 "Residency · St. Joseph Hospital, NJ",
-                "Practicing since 2011",
+                "Practicing since 2005",
                 "Preventive & restorative focus",
                 "Cosmetic & implant dentistry",
                 "Root canal therapy",
