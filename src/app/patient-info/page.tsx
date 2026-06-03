@@ -244,27 +244,35 @@ export default function PatientInfoPage() {
 
       {/* PREMIERCARE */}
       <Section bg="brand-soft" id="premiercare" className="scroll-mt-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
             <Eyebrow>No insurance? No problem.</Eyebrow>
             <Heading className="mt-3">
               The PremierCare Savings Plan.
             </Heading>
             <p className="mt-5 text-ink-2 leading-relaxed">
-              Our in-house membership plan was designed for patients without
-              dental insurance. For a single annual fee, members receive
-              preventive care and discounts on many treatments, based on the
-              current plan terms.
+              PremierCare is our in-office dental savings plan, designed to
+              help Premier Dentistry patients receive dental treatment at a
+              lower rate. The plan rewards patient loyalty with the same level
+              of care our team provides every day, with savings on preventive,
+              restorative, cosmetic, and specialty services.
+            </p>
+            <p className="mt-4 text-ink-2 leading-relaxed">
+              PremierCare is valid only for patients of Premier Dentistry and
+              can only be used in our office. To learn more or sign up, contact
+              us today. One of our friendly team members can answer your
+              questions, review current terms, and help you start using your
+              benefits right away.
             </p>
 
-            <ul className="mt-6 grid sm:grid-cols-2 gap-3 max-w-xl">
+            <ul className="mt-6 grid sm:grid-cols-2 gap-3">
               {[
-                "Covered cleanings & exams",
-                "Routine X-rays included",
-                "Discount on most treatments",
-                "No dental insurance claim forms",
-                "Ask us for current enrollment terms",
-                "Family pricing available",
+                "2 dental exams and cleanings per year included",
+                "All low-dose digital X-rays included when needed",
+                "Fluoride treatment included twice per year",
+                "Oral cancer screenings included twice per year",
+                "One emergency exam with necessary X-rays included per year",
+                "Discounts on fillings, crowns, implants, root canals, and more",
               ].map((b) => (
                 <li
                   key={b}
@@ -277,7 +285,7 @@ export default function PatientInfoPage() {
             </ul>
 
             <div className="mt-7 flex gap-3">
-              <Button href="/contact">Learn more about PremierCare</Button>
+              <Button href="/contact">Ask about PremierCare</Button>
               <Button href={site.phoneHref} variant="secondary">
                 <Icon name="phone" className="h-4 w-4" /> {site.phone}
               </Button>
@@ -285,19 +293,19 @@ export default function PatientInfoPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="bg-white rounded-3xl p-8 shadow-card border border-line">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-line">
               <div className="text-xs uppercase tracking-[0.18em] text-muted">
-                PremierCare Plan
+                Annual fees
               </div>
               <div className="mt-2 font-display text-3xl text-ink">
-                A simpler way to plan preventive care.
+                Simple membership pricing.
               </div>
               <div className="mt-6 space-y-3">
                 {[
-                  { k: "Cleanings", v: "Included" },
-                  { k: "Exams", v: "Included" },
-                  { k: "X-rays", v: "Included" },
-                  { k: "Other treatment", v: "Discounted" },
+                  { k: "Single member", v: "$375" },
+                  { k: "Each additional member age 15+", v: "$325" },
+                  { k: "Each additional member under 15", v: "$250" },
+                  { k: "Estimated annual savings", v: "Over $600+" },
                 ].map((r) => (
                   <div
                     key={r.k}
@@ -309,11 +317,82 @@ export default function PatientInfoPage() {
                 ))}
               </div>
               <p className="mt-6 text-xs text-muted">
-                Call us for current pricing and family-plan details.
+                Members must be paid annually. Monthly payments are not
+                accepted. Ask our team for current terms and family-plan
+                details.
               </p>
             </div>
           </div>
         </div>
+
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          {[
+            {
+              title: "Diagnostic and preventive",
+              rows: [
+                ["2 dental exams", "100%"],
+                ["1 emergency exam", "100%"],
+                ["All low-dose digital X-rays", "100%"],
+                ["Child or adult prophylaxis", "100%"],
+                ["Fluoride treatment", "100%"],
+                ["Oral cancer screenings", "100%"],
+                ["Additional cleanings per year", "30%"],
+                ["Dental sealants", "40%"],
+              ],
+            },
+            {
+              title: "Restorative and cosmetics",
+              rows: [
+                ["Fillings", "30%"],
+                ["Build-up and posts", "30%"],
+                ["Crowns", "20%"],
+                ["Teeth whitening", "20%"],
+                ["Veneers or bonding", "20%"],
+              ],
+            },
+            {
+              title: "Specialty treatments",
+              rows: [
+                ["Root canals", "20%"],
+                ["Extractions", "20%"],
+                ["Implants", "20%"],
+                ["Periodontal deep cleanings", "30%"],
+                ["Bone grafts", "20%"],
+                ["Sedation options", "20%"],
+                ["Dentures and partials", "20%"],
+              ],
+            },
+          ].map((table) => (
+            <div
+              key={table.title}
+              className="rounded-2xl border border-line bg-white p-5 shadow-soft"
+            >
+              <h3 className="font-display text-xl text-ink">
+                {table.title}
+              </h3>
+              <div className="mt-4 divide-y divide-line">
+                {table.rows.map(([procedure, savings]) => (
+                  <div
+                    key={procedure}
+                    className="flex items-center justify-between gap-4 py-2.5 text-sm"
+                  >
+                    <span className="text-ink-2">{procedure}</span>
+                    <span className="shrink-0 font-semibold text-brand">
+                      {savings}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-5 text-xs leading-6 text-muted">
+          PremierCare is not dental insurance and cannot be combined with
+          insurance plans or other office fees. Plan savings are based on
+          Premier Dentistry office fees and may vary by procedure. Please ask
+          our team for the current brochure and full membership details.
+        </p>
       </Section>
 
       {/* FINANCIAL POLICY */}
