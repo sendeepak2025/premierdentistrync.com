@@ -55,7 +55,7 @@ export default function HomePage() {
         about: { "@id": absoluteUrl("/#dentist") },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: absoluteUrl("/hero-family-all-screens.png"),
+          url: absoluteUrl("/new.png"),
           width: 1920,
           height: 900,
         },
@@ -94,9 +94,14 @@ export default function HomePage() {
         <p className="sr-only">
           Premier Dentistry of Charlotte provides same-day crowns, emergency appointments, advanced technology, and family-friendly dental care.
         </p>
-        <div className="relative w-full h-[80vh] min-h-[700px] overflow-hidden">
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            height: "clamp(480px, 78svh, 920px)",
+          }}
+        >
           <Image
-            src="/hero-family-all-screens.png"
+            src="/hero-new.png"
             alt="Modern Family Dentistry in Charlotte at Premier Dentistry"
             fill
             priority
