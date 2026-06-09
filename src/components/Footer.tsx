@@ -117,8 +117,11 @@ export function Footer() {
             © {new Date().getFullYear()} Premier Dentistry of Charlotte. All
             rights reserved.
           </p>
-          <p>
-            Designed with care for healthier, happier smiles.
+          <p className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+            <span>Designed with care by</span>
+            <span className="font-semibold text-white/80">
+              Varn DigiHealth
+            </span>
           </p>
         </div>
       </div>
