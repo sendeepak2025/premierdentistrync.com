@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const blogPaths = blogPosts.map((post) => `/blog/${post.slug}`);
   const imageMap: Record<string, string[]> = {
-    "": ["/og-image.png", "/hero-family-all-screens.png", "/clinic/clinic-1.jpg"],
+    "": ["/og-image.png", "/hero-new.png", "/clinic/clinic-1.jpg"],
     "/about": [
       "/dr-patel.jpg",
       "/team-susan-autry.jpg",
