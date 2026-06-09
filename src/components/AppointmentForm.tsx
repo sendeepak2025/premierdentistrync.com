@@ -13,10 +13,31 @@ export function AppointmentForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
-    // Placeholder submission — wire this to your form provider (Formspree, Resend, etc.)
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("success");
-    (e.target as HTMLFormElement).reset();
+
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: data.get("firstName"),
+          lastName:  data.get("lastName"),
+          email:     data.get("email"),
+          phone:     data.get("phone"),
+          service:   data.get("service"),
+          time:      data.get("time"),
+          notes:     data.get("notes"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   if (status === "success") {
@@ -38,6 +59,30 @@ export function AppointmentForm() {
           onClick={() => setStatus("idle")}
         >
           Send another request
+        </button>
+      </div>
+    );
+  }
+
+  if (status === "error") {
+    return (
+      <div className="rounded-2xl bg-red-50 border border-red-200 p-8 text-center">
+        <div className="mx-auto w-14 h-14 rounded-full bg-white flex items-center justify-center text-red-500">
+          <Icon name="close" className="h-7 w-7" />
+        </div>
+        <h3 className="mt-4 font-display text-2xl text-ink">
+          Something went wrong.
+        </h3>
+        <p className="mt-2 text-ink-2 max-w-md mx-auto">
+          We couldn&apos;t send your message. Please call us directly at{" "}
+          <a href="tel:+17045448860" className="font-semibold text-brand">(704) 544-8860</a>.
+        </p>
+        <button
+          type="button"
+          className="mt-5 text-sm text-brand hover:text-brand-2 font-medium"
+          onClick={() => setStatus("idle")}
+        >
+          Try again
         </button>
       </div>
     );
