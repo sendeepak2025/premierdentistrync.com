@@ -175,7 +175,12 @@ export default function PatientInfoPage() {
 
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
             <a
-              href={`mailto:${site.email}?subject=New%20Patient%20Forms`}
+              href={`mailto:${site.email}?subject=${encodeURIComponent(
+                "New Patient Forms Request"
+              )}&body=${encodeURIComponent(
+                "Hello, please email me the new patient registration forms."
+              )}`}
+              aria-label={`Email ${site.email} to request new patient forms`}
               className="bg-white rounded-2xl p-6 border border-line shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all"
             >
               <div className="w-11 h-11 rounded-xl bg-brand-soft text-brand flex items-center justify-center mb-4">
@@ -183,7 +188,8 @@ export default function PatientInfoPage() {
               </div>
               <h3 className="font-display text-lg text-ink">Email me the forms</h3>
               <p className="mt-2 text-sm text-ink-2">
-                We will reply with a digital intake link as soon as our team is able.
+                Opens an email to {site.email} so our team can send the
+                digital intake link.
               </p>
             </a>
             <a

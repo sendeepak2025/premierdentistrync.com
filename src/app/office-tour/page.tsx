@@ -22,29 +22,29 @@ export const metadata: Metadata = {
 
 const rooms = [
   {
+    name: "Office Exterior",
+    note: "Easy ground-floor access with free parking right outside our Ballantyne office.",
+    image: "/clinic/clinic-1.jpg",
+  },
+  {
     name: "Welcome Lounge",
     note: "Calm seating, fresh coffee, and a front-desk team that knows you by name.",
-    image: "/clinic/clinic-1.jpg",
+    image: "/clinic/clinic-5.jpg",
+  },
+  {
+    name: "Sterilization Center",
+    note: "Careful sterilization protocols for every instrument and every visit.",
+    image: "/clinic/clinic-2.jpg",
   },
   {
     name: "Consultation Room",
     note: "Big-screen imaging so you can see what we see and ask anything.",
-    image: "/clinic/clinic-2.jpg",
+    image: "/clinic/clinic-4.jpg",
   },
   {
     name: "Treatment Suite",
     note: "Ergonomic chairs, soft lighting, and comfort-focused treatment rooms.",
     image: "/clinic/clinic-3.jpg",
-  },
-  {
-    name: "Imaging Bay",
-    note: "Digital imaging tools that support clear, efficient diagnosis.",
-    image: "/clinic/clinic-4.jpg",
-  },
-  {
-    name: "Sterilization Center",
-    note: "Careful sterilization protocols for every instrument and every visit.",
-    image: "/clinic/clinic-5.jpg",
   },
   {
     name: "Hygiene Suite",
@@ -120,7 +120,6 @@ export default function OfficeTourPage() {
             "Noise-cancelling headphones",
             "Streaming in every room",
             "Nitrous oxide options when appropriate",
-            "Aromatherapy on request",
             "Sparkling and still water",
             "Kid-friendly chair time",
             "Same-day CEREC restorations",
