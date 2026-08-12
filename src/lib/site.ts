@@ -251,21 +251,21 @@ export const services: Service[] = [
 export const testimonials = [
   {
     name: "Clear explanations",
-    role: "Patient feedback theme",
+    role: "Patient feedback ",
     quote:
       "Patients often tell us they appreciate seeing X-rays and photos on screen, hearing their options clearly, and understanding what is urgent versus what can wait.",
     stars: 5,
   },
   {
     name: "Comfortable visits",
-    role: "Patient feedback theme",
+    role: "Patient feedback ",
     quote:
       "The team builds extra time into visits so patients can ask questions, settle in, and move through treatment without feeling rushed.",
     stars: 5,
   },
   {
     name: "Modern care",
-    role: "Patient feedback theme",
+    role: "Patient feedback ",
     quote:
       "Digital scans, CEREC same-day crowns, 3D imaging, and intraoral photos help make treatment easier to understand and more comfortable to plan.",
     stars: 5,

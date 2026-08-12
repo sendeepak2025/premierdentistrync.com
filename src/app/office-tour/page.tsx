@@ -49,7 +49,7 @@ const rooms = [
   {
     name: "Hygiene Suite",
     note: "Comfortable cleanings with gentle hygiene care and modern equipment.",
-    image: "/clinic/clinic-6.jpg",
+    image: "/clinic/clinic-6.png",
   },
 ];
 
