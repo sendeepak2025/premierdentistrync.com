@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Imap from "imap";
+import { connectToDatabase } from "@/lib/mongodb";
 
 export async function POST(req: NextRequest) {
   try {
@@ -24,6 +25,29 @@ export async function POST(req: NextRequest) {
         { error: "Missing required fields" },
         { status: 400 }
       );
+    }
+
+    // Store in MongoDB
+    try {
+      const { db } = await connectToDatabase();
+      const submission = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        service: service || null,
+        time: time || null,
+        notes: notes || null,
+        submittedAt: new Date(),
+        status: 'new',
+        ipAddress: req.headers.get('x-forwarded-for') || 'unknown'
+      };
+
+      const result = await db.collection('form-submissions').insertOne(submission);
+      console.log("💾 Form submission stored in database:", result.insertedId);
+    } catch (dbError) {
+      console.error("❌ Database storage failed:", dbError);
+      // Continue with email sending even if database fails
     }
 
     // Create transporter

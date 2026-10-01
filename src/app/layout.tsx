@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { BookingStrip } from "@/components/BookingStrip";
-import { StructuredData } from "@/components/StructuredData";
-import { StickyMobileCta } from "@/components/StickyMobileCta";
+import { SiteChrome } from "@/components/SiteChrome";
 import { absoluteUrl, primarySeoKeywords, siteUrl } from "@/lib/seo";
 
 const sans = Inter({
@@ -121,12 +117,7 @@ export default function RootLayout({
             gtag('config', 'G-K2RGVR7QTB');
           `}
         </Script>
-        <StructuredData />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <BookingStrip />
-        <Footer />
-        <StickyMobileCta />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
