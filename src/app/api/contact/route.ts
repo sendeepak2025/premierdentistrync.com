@@ -176,16 +176,18 @@ export async function POST(req: NextRequest) {
       console.log("📋 Copy sent to sender's inbox for records");
       
       // PROPER SOLUTION: Save to Sent folder using IMAP
-      await saveToSentFolder({
-        from: `"Premier Dentistry Website" <${process.env.SMTP_USER}>`,
-        to: process.env.CONTACT_TO_EMAIL,
-        subject: `New Appointment Request — ${firstName} ${lastName}`,
-        html: html,
-        messageId: mailResult.messageId
-      });
+      if (process.env.CONTACT_TO_EMAIL) {
+        await saveToSentFolder({
+          from: `"Premier Dentistry Website" <${process.env.SMTP_USER!}>`,
+          to: process.env.CONTACT_TO_EMAIL,
+          subject: `New Appointment Request — ${firstName} ${lastName}`,
+          html: html,
+          messageId: mailResult.messageId
+        });
+      }
       
     } catch (copyError) {
-      console.warn("⚠️  Could not send copy to sender:", copyError.message);
+      console.warn("⚠️  Could not send copy to sender:", copyError instanceof Error ? copyError.message : String(copyError));
     }
 
     return NextResponse.json({ success: true });
