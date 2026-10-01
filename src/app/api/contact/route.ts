@@ -1,13 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import Imap from "imap";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { firstName, lastName, email, phone, service, time, notes } = body;
 
+    console.log("📧 Form submission received:", {
+      firstName,
+      lastName,
+      email,
+      phone,
+      service,
+      time,
+      notes: notes ? "yes" : "no"
+    });
+
     // Validate required fields
     if (!firstName || !lastName || !email || !phone) {
+      console.log("❌ Validation failed: Missing required fields");
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
@@ -23,6 +35,19 @@ export async function POST(req: NextRequest) {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      // Hostinger-specific settings for proper sent folder saving
+      tls: {
+        rejectUnauthorized: false
+      },
+      debug: true, // Enable debug logs
+      logger: true // Enable logger
+    });
+
+    console.log("🔧 SMTP Configuration:", {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      toEmail: process.env.CONTACT_TO_EMAIL,
     });
 
     // Email HTML content
@@ -108,13 +133,60 @@ export async function POST(req: NextRequest) {
     `;
 
     // Send email
-    await transporter.sendMail({
+    console.log("📬 Attempting to send email to:", process.env.CONTACT_TO_EMAIL);
+    
+    const mailResult = await transporter.sendMail({
       from: `"Premier Dentistry Website" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New Appointment Request — ${firstName} ${lastName}`,
       html,
+      // Add headers to ensure proper delivery tracking
+      headers: {
+        'X-Mailer': 'Premier Dentistry Contact Form',
+        'X-Priority': '1'
+      }
     });
+
+    console.log("✅ Email sent successfully:", {
+      messageId: mailResult.messageId,
+      to: process.env.CONTACT_TO_EMAIL,
+      subject: `New Appointment Request — ${firstName} ${lastName}`,
+      response: mailResult.response
+    });
+
+    // CRITICAL: SMTP doesn't save to sent folder automatically
+    // We need to manually save using IMAP or send a copy to sender
+    try {
+      // Send a copy to sender's inbox for record keeping
+      await transporter.sendMail({
+        from: `"Premier Dentistry Website" <${process.env.SMTP_USER}>`,
+        to: process.env.SMTP_USER, // Send copy to sender
+        subject: `[COPY] New Appointment Request — ${firstName} ${lastName}`,
+        html: `
+          <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 16px; margin-bottom: 20px; border-radius: 8px;">
+            <p style="margin: 0; color: #856404;">
+              📋 <strong>Copy for Records:</strong> This is a copy of the appointment request sent to ${process.env.CONTACT_TO_EMAIL}
+            </p>
+          </div>
+          ${html}
+        `,
+      });
+      
+      console.log("📋 Copy sent to sender's inbox for records");
+      
+      // PROPER SOLUTION: Save to Sent folder using IMAP
+      await saveToSentFolder({
+        from: `"Premier Dentistry Website" <${process.env.SMTP_USER}>`,
+        to: process.env.CONTACT_TO_EMAIL,
+        subject: `New Appointment Request — ${firstName} ${lastName}`,
+        html: html,
+        messageId: mailResult.messageId
+      });
+      
+    } catch (copyError) {
+      console.warn("⚠️  Could not send copy to sender:", copyError.message);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
@@ -124,4 +196,97 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+// Function to save email to Sent folder using IMAP
+async function saveToSentFolder(emailData: {
+  from: string;
+  to: string;
+  subject: string;
+  html: string;
+  messageId: string;
+}) {
+  return new Promise<void>((resolve, reject) => {
+    const imap = new Imap({
+      user: process.env.SMTP_USER!,
+      password: process.env.SMTP_PASS!,
+      host: process.env.IMAP_HOST || 'imap.hostinger.com',
+      port: 993,
+      tls: true,
+      tlsOptions: {
+        rejectUnauthorized: false
+      }
+    });
+
+    imap.once('ready', () => {
+      console.log("📬 IMAP connected, saving to Sent folder...");
+      
+      // Create email message in proper format
+      const emailMessage = [
+        `Message-ID: ${emailData.messageId}`,
+        `From: ${emailData.from}`,
+        `To: ${emailData.to}`,
+        `Subject: ${emailData.subject}`,
+        `Date: ${new Date().toUTCString()}`,
+        `MIME-Version: 1.0`,
+        `Content-Type: text/html; charset=UTF-8`,
+        ``,
+        emailData.html
+      ].join('\r\n');
+
+      // Try different sent folder names (Hostinger variations)
+      const sentFolderNames = ['Sent', 'INBOX.Sent', 'Sent Messages', 'Sent Items'];
+      
+      let folderTried = 0;
+      function trySentFolder() {
+        if (folderTried >= sentFolderNames.length) {
+          reject(new Error('No Sent folder found'));
+          return;
+        }
+        
+        const folderName = sentFolderNames[folderTried];
+        folderTried++;
+        
+        imap.openBox(folderName, false, (err, box) => {
+          if (err) {
+            console.log(`❌ ${folderName} folder not found, trying next...`);
+            trySentFolder();
+            return;
+          }
+          
+          imap.append(emailMessage, { mailbox: folderName }, (appendErr) => {
+            if (appendErr) {
+              console.error(`❌ Failed to save to ${folderName}:`, appendErr.message);
+              trySentFolder();
+            } else {
+              console.log(`✅ Email saved to ${folderName} folder successfully`);
+              imap.end();
+              resolve();
+            }
+          });
+        });
+      }
+      
+      trySentFolder();
+    });
+
+    imap.once('error', (err) => {
+      console.error("❌ IMAP Error:", err.message);
+      reject(err);
+    });
+
+    imap.once('end', () => {
+      console.log("📪 IMAP connection ended");
+    });
+
+    // Set timeout for IMAP operation
+    setTimeout(() => {
+      if (imap.state !== 'disconnected') {
+        imap.end();
+        reject(new Error('IMAP timeout'));
+      }
+    }, 10000);
+
+    imap.connect();
+  });
 }
